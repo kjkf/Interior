@@ -26,27 +26,27 @@ task('clean', () => {
 });
 
 task('copy:assets', () => {
-  return src('src/assets/*.*')
-      .pipe(dest('dist/public/assets'))
-      .pipe(reload({ stream: true }));
+    return src('src/assets/*.*')
+        .pipe(dest('dist/public/assets'))
+        .pipe(reload({ stream: true }));
 });
 
 task('copy:html', () => {
-  return src('src/*.html')
-      .pipe(dest('dist/views'))
-      .pipe(reload({ stream: true }));
+    return src('src/*.html')
+        .pipe(dest('dist'))
+        .pipe(reload({ stream: true }));
 });
 
 task('copy:php', () => {
     return src('src/*.php')
-        .pipe(dest('dist/views'))
+        .pipe(dest('dist'))
         .pipe(reload({ stream: true }));
 });
 
 task('copy:favicon', () => {
-  return src('src/*.ico')
-      .pipe(dest('dist/public'))
-      .pipe(reload({ stream: true }));
+    return src('src/*.ico')
+        .pipe(dest('dist/public'))
+        .pipe(reload({ stream: true }));
 });
 
 task('copy:css', () => {
@@ -57,15 +57,15 @@ task('copy:css', () => {
 
 
 task('copy:fonts', () => {
-  return src('src/fonts/**/*.*')
-      .pipe(dest('dist/public/fonts'))
-      .pipe(reload({ stream: true }));
+    return src('src/fonts/**/*.*')
+        .pipe(dest('dist/public/fonts'))
+        .pipe(reload({ stream: true }));
 });
 
 task('copy:images', () => {
-  return src('src/images/content/**/*.*')
-      .pipe(dest('dist/public/images/content'))
-      .pipe(reload({ stream: true }));
+    return src('src/images/content/**/*.*')
+        .pipe(dest('dist/public/images/content'))
+        .pipe(reload({ stream: true }));
 });
 
 task('copy:icons', () => {
@@ -114,7 +114,7 @@ task('icons', () => {
                     }
                 }
             })
-         )
+        )
         .pipe(dest("dist/public/images/icons"));
 });
 
@@ -167,22 +167,15 @@ task('watch', () => {
 
 });
 //================================================================================================
-task('build-copy:html', () => {
-    return src('src/index.html')
-        .pipe(rename("views/index.ejs"))
-        .pipe(dest('dist'))
-        .pipe(reload({ stream: true }));
-});
-
 task(
     "default",
     series('clean', parallel('copy:html', 'copy:php', 'copy:favicon', 'copy:fonts', 'copy:images', 'copy:icons', 'copy:css', 'copy:assets', 'styles', 'icons', 'scripts'),
-    parallel('watch', 'server')
+        parallel('watch', 'server')
     )
 );
 
 task(
     "build",
-    series('clean', parallel('build-copy:html', 'copy:php', 'copy:favicon', 'copy:fonts', 'copy:images', 'copy:icons', 'copy:css', 'copy:assets', 'styles', 'icons', 'scripts')
+    series('clean', parallel('copy:html', 'copy:php', 'copy:favicon', 'copy:fonts', 'copy:images', 'copy:icons', 'copy:css', 'copy:assets', 'styles', 'icons', 'scripts')
     )
 );

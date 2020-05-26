@@ -1,0 +1,12 @@
+node_modules
+dist
+.idea/
+*.iml
+out
+build
+gradle
+package-lock.json
+.gradle
+*.env
+*.xml
+.DS_Store

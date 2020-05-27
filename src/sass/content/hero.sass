@@ -1,6 +1,7 @@
 .hero
   width: 100%
   min-height: 100vh
+  color: #fff
   background:
     image: url("../images/content/bg_hero.jpg")
     //color: #4c4c4c
@@ -10,3 +11,124 @@
 
   h1.title
     color: #ffffff
+    text-transform: uppercase
+    margin-bottom: 20px
+
+  .subtitle
+    color: $grey
+    font-size: 18px
+    line-height: 1.4
+    padding-right: 270px
+    margin-bottom: 65px
+
+.lightbrown-text
+  color: $lightbrown_1
+
+.content__col--left
+  max-width: 790px
+  margin-right: 100px
+
+.advantages
+  padding-right: 195px
+  .row
+    margin-bottom: 35px
+    .col2 .advantage-item
+      //padding-right: 20px
+
+  .advantage-item
+    font-size: 16px
+    line-height: 1.25
+    //padding-left: 50px
+    padding: 0 10px 0 50px
+    position: relative
+    &:before
+      content: ''
+      display: inline-block
+      width: 30px
+      height: 30px
+      border-radius: 50%
+      background:
+        color: $lightbrown_1
+        image: url("../images/icons/check-mark.svg")
+        repeat: no-repeat
+        position: center
+      position: absolute
+      top: 0
+      left: 0px
+
+.content__col--right
+  display: flex
+  //justify-content: center
+  align-items: center
+  padding-top: 100px
+  flex-direction: column
+.caption
+  font-size: 16px
+  line-height: 1.3
+  margin-bottom: 100px
+  position: relative
+  &:before
+    content: ''
+    display: inline-block
+    width: 65px
+    height: 50px
+    position: absolute
+    right: 0
+    top: 45px
+    background:
+      image: url("../images/icons/key.png")
+      position: center
+      repeat: no-repeat
+      size: contain
+
+.mission
+  color: $black2
+  font-size: 14px
+  line-height: 1.3
+  font-family: $font-Roboto-Regular
+
+.pentagon
+  background: #ffffff
+  padding: 20px 40px 0
+  width: 170px
+  position: relative
+  transform: translateY(-10px)
+  &:before
+    content: ''
+    display: inline-block
+    width: 0px
+    height: 0
+    border-top: 45px solid #ffffff
+    border-left: 85px solid transparent
+    border-right: 85px solid transparent
+    position: absolute
+    left: 0
+    bottom: -45px
+
+.pentagon.mission-wrapper
+  width: 184px
+  padding: 0 7px
+  background: rgba(255,255,255, .3)
+  &:before
+    border-top-color: rgba(255,255,255, .3)
+    border-left: 92px solid transparent
+    border-right: 92px solid transparent
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

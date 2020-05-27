@@ -8,7 +8,7 @@ html
 
 body
 	font:
-		//family: $font-Roboto-Regular
+		family: $font-Roboto-Light
 		size: 1rem
 		weight: 400
 	color: $black
@@ -19,7 +19,7 @@ body
 	height: 100vh
 	background-color: $body_bg
 	+phone-down
-		font-size: 12px
+		font-size: $fontSize_body_mob
 
 h1, h2, h3, h4, p, ul
 	margin: 0px
@@ -36,19 +36,16 @@ h2
 	font-size: $fontSize_h2
 	line-height: $lineHeight_h2
 	+phone-down
-		font-size: 20px
+		font-size: $fontSize_h2_mob
+		line-height: $lineHeight_h2_mob
 
 h3
 	font-size: $fontSize_h3
 	line-height: $lineHeight_h3
-	+phone-down
-		font-size: 16px
 
 h4
 	font-size: $fontSize_h4
 	line-height: $lineHeight_h4
-	+phone-down
-		font-size: 16px
 
 
 .container
@@ -61,10 +58,7 @@ h4
 	color: $black
 	font-family: $font-HistoryPro-Two
 
-.bold-text
-	font-weight: bold
-
-.text-upper
+h1.title, h2.title
 	text-transform: uppercase
 
 .btn

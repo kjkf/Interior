@@ -121,3 +121,19 @@ h1.title, h2.title
 
 .font-history
 	font-family: $font-HistoryPro-Two
+
+.footnote
+	font-family: $font-Roboto-LightItalic
+	font-size: 14px
+	line-height: 1.6
+	border-top: 1px solid $lightgrey_2
+	width: 80%
+	padding: 30px 35px 0
+	position: relative
+	&:before
+		content: ''
+		display: inline-block
+		+bg-image(18px, 24px, transparent, "../images/icons/bookmark.svg", cover)
+		position: absolute
+		left: 0
+		top: 27px

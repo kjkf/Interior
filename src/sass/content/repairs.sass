@@ -1,0 +1,138 @@
+.repairs
+  padding-top: 40px
+  +tablet-down
+    padding-top: 0px
+    padding-bottom: 60px
+  &-quests
+    position: relative
+    color: #29201b
+    font-size: 14px
+    margin-left: 27px
+    width: 558px
+    height: 600px
+    background:
+      color: #f1e9e3
+      image: url("../images/content/thinking-guy.png")
+      repeat: no-repeat
+      position: bottom center
+    +laptop-down
+      margin-left: 0px
+    +tablet-down
+      width: 100%
+      min-height: 444px
+      background-size: contain
+      font-size: 12px
+      line-height: 15.12px
+    +phone-down
+      //background-size: 80%
+      height: 444px
+      background-position: center 455%
+
+
+  &-quest
+    position: absolute
+    top: 0px
+    left: 0px
+    width: 100px
+    line-height: 1.3
+    +phone-down
+      width: 80px
+    &:first-child
+      top: 7%
+      left: 42%
+      +phone-down
+        top: 8%
+    &:nth-child(2)
+      top: 18%
+      left: 17%
+      +phone-down
+        top: 21%
+        left: 11%
+    &:nth-child(3)
+      top: 17%
+      right: 70px
+      left: unset
+      +phone-down
+        top: 20%
+        right: 2%
+    &:nth-child(4)
+      top: 38%
+      left: 11%
+      +phone-down
+        top: 44%
+        left: 3%
+    &:nth-child(5)
+      top: 33%
+      left: unset
+      right: 10%
+      +phone-down
+        top: 38%
+        right: 0%
+    &:last-child
+      top: 46%
+      left: unset
+      right: 13%
+      +phone-down
+        top: 53%
+        right: 3%
+
+  &-right
+    +tablet-down
+      margin-bottom: 20px
+    +phone-down
+      padding: 0px
+    .rect
+      border-width: 10px
+      width: 642px
+      height: 600px
+      margin-top: 60px
+      margin-left: -95px
+      padding: 88px 40px 88px 116px
+      position: absolute
+      z-index: -1
+      margin-bottom: 100px
+      +laptop-down
+        width: 100%
+        height: auto
+        margin-left: -6%
+      +tablet-down
+        position: static
+        margin-left: 0px
+        padding: 35px 15px 35px 20px
+        margin-bottom: 0px
+
+    .title
+      margin-bottom: 40px
+      +tablet-down
+        margin-bottom: 25px
+    .text
+      margin-bottom: 23px
+      &.last
+        margin-bottom: 50px
+        +tablet-down
+          margin-bottom: 30px
+
+    .footnote
+      padding-top: 43px
+      width: 100%
+      +tablet-down
+        padding: 20px 5px 0 30px
+      &:before
+        top: 45px
+        +tablet-down
+          top: 22px
+
+  &-left
+    +phone-down
+      padding: 0px
+
+.repairs-wrap
+  +tablet-down
+    display: flex
+    flex-direction: column
+  .repairs-left
+    +tablet-down
+      order: 2
+  .repairs-right
+    +tablet-down
+      order: 1

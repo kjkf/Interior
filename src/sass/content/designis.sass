@@ -1,0 +1,81 @@
+.designis
+  padding-top: 75px
+  padding-bottom: 66px
+  position: relative
+  +tablet-down
+    padding-top: 70px
+    padding-bottom: 47px
+    position: relative
+  .container
+    position: relative
+    .bg-text
+      justify-content: center
+      margin-left: -30px
+      +laptop-down
+        margin-left: 0px
+  &:before
+    content: ''
+    position: absolute
+    top: -233px
+    left: 0px
+    +bg-image(415px, 500px, transparent, "../images/icons/leaf-left.png", contain)
+    +tablet-down
+      display: none
+
+  &:after
+    content: ''
+    position: absolute
+    top: 62%
+    right: 0px
+    +bg-image(411px, 638px, transparent, "../images/icons/leaf-right.png", contain)
+    +tablet-down
+      display: none
+
+  &-left
+    margin-top: 20px
+    +tablet-down
+      position: absolute
+      top: 58px
+      right: 25px
+      text-align: right
+    +phone-down
+      right: 0px
+
+    .rect
+      margin-left: -20px
+      +tablet-down
+        width: 85px
+        height: 109px
+  &-right
+    padding-left: 60px
+    +tablet-down
+      padding-left: 10px
+
+    .title
+      padding-right: 115px
+      margin-bottom: 40px
+      +tablet-down
+        padding-right: 100px
+        line-height: 1.8
+        margin-bottom: 62px
+
+    .phrase
+      margin-left: 110px
+      margin-bottom: 30px
+      +tablet-down
+        margin-left: 0px
+
+    .text
+      padding-left: 50px
+      margin-left: 110px
+      margin-bottom: 40px
+      letter-spacing: 1px
+      +tablet-down
+        padding-left: 30px
+        margin-left: 0
+        line-height: 1.9
+        letter-spacing: 0px
+        margin-bottom: 23px
+      &.title
+        +tablet-down
+          padding-left: 0px

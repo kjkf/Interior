@@ -1,4 +1,59 @@
 .our-method
-  height: 100vh
+  //height: 100vh
   position: relative
+  font-size: 18px
+  line-height: 1.67
 
+  &:before, &:after
+    content: ''
+    display: inline-block
+    position: absolute
+    background:
+      repeat: no-repeat
+      size: cover
+      //color: #80bdff
+
+  &:before
+    width: 495px
+    height: 630px
+    background-image: url("../images/icons/list.png")
+    left: 0
+    top: -10px
+
+  &:after
+    width: 210px
+    height: 600px
+    background-image: url("../images/icons/lamp.png")
+    background-size: contain
+    left: 20%
+    top: 0
+
+  .container
+    padding: 140px 230px 130px 470px
+
+  .title
+    margin-bottom: 43px
+
+  .method-descr
+    margin-bottom: 45px
+
+  .note
+    padding-left: 30px
+    position: relative
+    &:before
+      content: ''
+      display: inline-block
+      width: 20px
+      height: 30px
+      position: absolute
+      left: 0px
+      top: 7px
+      background:
+        color: #80bdff
+        size: contain
+        image: url("../images/icons/note.svg")
+        repeat: no-repeat
+
+  .orange-text
+    font-family: $font-Roboto-Bold
+    color: $orange

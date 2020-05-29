@@ -1,0 +1,37 @@
+.before-after
+  text-align: center
+  margin-bottom: 75px
+
+  .before-after-imgs
+    padding: 0 112px
+    margin-top: 35px
+    position: relative
+
+    .img-wrapper
+      width: 485px
+      height: 485px
+      background: #dddddd
+      border-radius: 5px 0 0 5px
+      margin-right: 1px
+
+      &.right
+        border-radius: 0 5px 5px 0
+
+  .controls
+    display: flex
+    justify-content: space-evenly
+    align-items: center
+    width: 48px
+    height: 48px
+    border-radius: 50%
+    background: $lightbrown_1
+    position: absolute
+    top: calc(50% - 24px)
+    left: calc(50% - 24px)
+
+  .control
+    display: inline-block
+    +bg-image(12px, 12px, transparent, "../images/icons/right-arrow.svg", cover)
+
+  .contol--left
+    transform: rotate(180deg)

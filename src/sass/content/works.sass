@@ -2,12 +2,15 @@
   color: #525252
   //font-size: 18px
   line-height: 1.5
-  margin-bottom: 30px
+  margin-bottom: 33px
+
+  .container
+    padding: 0 23px 0 37px
 
   .section-title
     margin-bottom: 70px
   .title
-    margin-bottom: 20px
+    margin-bottom: 14px
     font-size: 30px
     line-height: 1
 
@@ -17,11 +20,22 @@
   .note
     font-size: 14px
     line-height: 1.57
+    position: relative
+    &:before
+      content: ''
+      display: inline-block
+      +bg-image(18px, 22px, transparent, "../images/icons/bookmark.svg", cover)
+      position: absolute
+      left: -29px
+      top: 2px
 
   .works
+    margin-bottom: 32px
     .row
       max-height: 336px
-      margin-bottom: 30px
+      margin-bottom: 36px
+      &:last-child
+        margin-bottom: 0
 
     .image-wrapper
       position: relative
@@ -35,7 +49,7 @@
         line-height: 1.5
         z-index: 10
         width: 60%
-        left: 40px
+        left: 50px
         bottom: 10px
 
         &--large
@@ -47,29 +61,33 @@
       &.top-left
         .image-caption
           bottom: unset
-          top: 20px
+          top: 12px
+          left: 42px
 
       &.bottom-right
         .image-caption
           left: unset
-          right: 20px
+          right: 10px
 
 .about-works
   //display: flex
   margin: 0 auto
   text-align: center
   text-transform: uppercase
+  font-family: $font-Roboto-Regular
   line-height: 1.5
 
-  .about-works-text-20px
-    font-size: 20px
+  .about-works-text-23px
+    font-size: 23px
 
-  .about-works-text-40px
-    font-size: 40px
+  .about-works-text-50px
+    font-size: 50px
+    line-height: 1
 
-  .about-works-text-18px
-    font-size: 18px
+  .about-works-text-24px
+    font-size: 24px
 
-  .about-works-text-14px
-    font-size: 14px
+  .about-works-text-17px
+    font-size: 17px
+    line-height: 1
     text-transform: none

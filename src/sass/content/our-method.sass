@@ -3,7 +3,7 @@
   position: relative
   font-size: 18px
   line-height: 1.67
-  margin-bottom: 50px
+  margin-bottom: 93px
 
   &:before, &:after
     content: ''
@@ -18,39 +18,36 @@
     width: 495px
     height: 630px
     background-image: url("../images/icons/list.png")
+    background-position-x: -336px
     left: 0
-    top: -10px
+    top: 0px
 
   &:after
     width: 210px
     height: 600px
     background-image: url("../images/icons/lamp.png")
     background-size: contain
-    left: 20%
+    left: 23%
     top: 0
 
   .container
-    padding: 140px 230px 130px 470px
+    padding: 132px 170px 130px 510px
 
   .title
-    margin-bottom: 43px
+    margin-bottom: 28px
+    font-size: 30px
 
   .method-descr
-    margin-bottom: 45px
+    margin-bottom: 35px
 
   .note
     padding-left: 30px
+    padding-right: 70px
     position: relative
     &:before
       content: ''
       display: inline-block
-      width: 20px
-      height: 30px
+      +bg-image(18px, 22px, transparent, "../images/icons/bookmark.svg", cover)
       position: absolute
-      left: 0px
-      top: 7px
-      background:
-        color: #80bdff
-        size: contain
-        image: url("../images/icons/note.svg")
-        repeat: no-repeat
+      left: 0
+      top: 9px

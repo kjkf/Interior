@@ -1,11 +1,14 @@
 .header
   font-family: $font-Roboto-Light
   color: #ffffff
-  margin-bottom: 120px
+  margin-bottom: 145px
+
+  .header-row
+    padding: 0 22px 0 13px
 
 .logo
   width: 175px
-  height: 150px
+  height: 134px
   //background: $logo_bg
   border-bottom-right-radius: 14px
   background: rgb(87,67,64)
@@ -16,7 +19,7 @@
   //color: #ffffff
   font-family: $font-UniNeueBook
   text-align: left
-  padding: 16px 40px
+  padding: 14px 42px
   &:before
     content: ''
     display: inline-block
@@ -33,7 +36,7 @@
     display: inline-block
     margin-bottom: 8px
     &:last-child
-      margin-left: 15px
+      margin-left: 10px
 
   .big-text
     color: #f2a704
@@ -47,17 +50,16 @@
 
   color: $lightgrey
   width: 175px
-  padding-top: 30px
-  margin-left: 20px
+  padding-top: 28px
+  margin-left: 22px
 
 .col--right
   padding-top: 14px
   align-items: flex-start
 
 .contact_wrapper
-  //font-family: $font-Roboto-Light
   text-align: right
-  margin-right: 10px
+  margin-right: 14px
 
   p
     font-size: 14px
@@ -75,8 +77,8 @@
       width: 17px
       height: 20px
       position: absolute
-      top: 5px
-      left: -17px
+      top: 8px
+      left: -25px
       background-image: url("../images/icons/phone.svg")
       background-color: transparent
       background-size: contain
@@ -92,9 +94,10 @@
     font-family: $font-Roboto-Regular
 
 .menu_wrapper
-  padding: 10px 10px 12px
+  padding: 4px 8px 31px
   border: 1px solid #9a9a9a
   cursor: pointer
+  position: relative
 
   .menu-title
     font-size: 16px
@@ -103,16 +106,19 @@
 
   .menu-icon
     display: inline-block
-    width: 100%
+    width: 40px
     height: 3px
-    position: relative
+    position: absolute
+    right: 11px
+    top: 40px
+
     background: $menu_brown
     text-align: right
 
     &:before, &:after
       content: ''
       display: inline-block
-      width: 100%
+      width: 40px
       height: 3px
       background: $menu_brown
       position: absolute
@@ -120,9 +126,9 @@
       right: 0
 
     &:after
-      top: 9px
+      top: 8px
       background: $menu_brown
-      width: 70%
+      width: 26px
 
 
 

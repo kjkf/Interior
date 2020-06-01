@@ -1,0 +1,129 @@
+.cheap-firm
+  background:
+    color: #e8d3c0
+    image: url("../images/content/cheapfirm-bg.jpg")
+    repeat: no-repeat
+    size: cover
+  padding-top: 82px
+  padding-bottom: 40px
+  min-height: 841px
+  +tablet-down
+    padding-top: 32px
+  &__descr
+    width: 465px
+    margin-bottom: 65px
+    +ipad-down
+      width: auto
+    +tablet-down
+      margin-bottom: 26px
+    +phone-down
+      width: 100%
+    .title
+      margin-bottom: 20px
+      +tablet-down
+        margin-bottom: 15px
+    .text
+      margin-bottom: 30px
+
+  &-comments
+    position: relative
+    width: 100%
+    min-height: 442px
+    +ipad-down
+      display: flex
+      flex-direction: column
+      align-items: center
+
+  &-comment
+    width: 322px
+    min-height: 173px
+    font-size: 14px
+    background-color: #FFFFFF
+    border-radius: 4px
+    line-height: 21px
+    position: absolute
+    +ipad-down
+      position: static
+      margin-bottom: 32px
+    &:last-child
+      +ipad-down
+        margin-bottom: 36px
+    &__in
+      padding: 33px 22px 6px 28px
+      position: relative
+      &:after
+        content: ''
+        position: absolute
+        bottom: 0px
+        left: 0px
+        width: 322px
+        min-height: calc(100% - 16px)
+        border-radius: 4px
+        box-shadow: 8px 10px rgba(255, 255, 255, 0.43), 18px 20px rgba(255, 255, 255, 0.16)
+
+
+    &:first-child
+      top: -213px
+      right: 7px
+    &:nth-child(2)
+      top: 0px
+      left: 40px
+    &:nth-child(3)
+      top: 47px
+      right: 130px
+      +laptop-down
+        right: 40px
+    &:last-child
+      top: 250px
+      left: 155px
+      +laptop-down
+        left: 55px
+
+    &__text
+      margin-bottom: 8px
+
+    &__time
+      font-size: 11px
+      text-align: right
+      color: #717171
+
+  &-phrase
+    width: 265px
+    position: absolute
+    bottom: 40px
+    right: 130px
+    +laptop-down
+      right: 30px
+    +ipad-down
+      position: static
+      margin-left: 35px
+      width: auto
+      margin-bottom: 40px
+  .phrase-grey
+    +ipad-down
+      font-size: 18px
+      line-height: 32px
+
+  &-left
+    padding-left: 8px
+    padding-right: 8px
+
+.ic-read
+  position: relative
+  margin-right: 15px
+  &:after
+    content: ''
+    position: absolute
+    top: 2px
+    right: -27px
+    +bg-image(16px, 15px, transparent, "../images/icons/double-tick-indicator.svg", cover)
+
+.ic-sad
+  display: inline-block
+  margin: 0px 2px
+  +bg-image(15px, 15px, transparent, "../images/icons/sad.svg", cover)
+
+.ic-pressure
+  display: inline-block
+  margin: 0px 2px
+  +bg-image(15px, 15px, transparent, "../images/icons/pressure.svg", cover)

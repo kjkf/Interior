@@ -1,0 +1,66 @@
+.lalafo
+  padding-top: 75px
+  padding-bottom: 70px
+  overflow: hidden
+  background:
+    color: transparent
+    image: url("../images/content/дизайн-домов-квартир-105-серии-интерьера-в-бишкеке-фото-отзывы-контакты.jpg")
+    repeat: no-repeat
+    size: cover
+
+  +tablet-down
+    padding-top: 55px
+    padding-bottom: 12px
+
+  .text
+    color: #FFFFFF
+    font-size: 18px
+    margin-bottom: 25px
+    margin-right: 10px
+    letter-spacing: 0.2px
+    +tablet-down
+      font-size: 14px
+
+  .title
+    margin-bottom: 30px
+    +phone-down
+      margin-bottom: 6px
+
+  &-img
+    position: absolute
+    top: -40px
+    right: -10px
+    +laptop-down
+      width: 100%
+    +ipad-down
+      position: static
+
+    +phone-down
+      width: 264px
+
+    img
+      width: 100%
+      height: auto
+
+  &-text
+    font-size: 14px
+    color: #FFFFFF
+    width: 165px
+    position: absolute
+    top: 80px
+    left: 55px
+    +tablet-down
+      top: 34px
+      left: 10px
+
+  &-left
+    position: relative
+    +tablet-down
+      display: flex
+      justify-content: center
+      margin-bottom: 8px
+
+  &-right
+    +phone-down
+      padding-left: 8px
+      padding-right: 8px

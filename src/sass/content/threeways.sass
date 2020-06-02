@@ -1,0 +1,77 @@
+.threeways
+  padding-top: 100px
+  padding-bottom: 42px
+  overflow: hidden
+  +ipad-down
+    padding-top: 50px
+    padding-bottom: 0px
+  &-img
+    display: inline-block
+    max-width: 600px
+    position: absolute
+    top: 112px
+    left: 0px
+    +ipad-down
+      position: static
+      width: 330px
+      height: 248px
+    img
+      width: 100%
+      height: auto
+
+  .title
+    line-height: 1.5
+    margin-bottom: 30px
+    +ipad-down
+      line-height: 1.85
+      letter-spacing: 0px
+      margin-bottom: 20px
+
+    &.last
+      text-align: right
+      margin-bottom: 23px
+      +ipad-down
+        margin-right: 75px
+        text-align: left
+        margin-left: 8px
+        margin-bottom: 16px
+
+  .phrase
+    font-size: 20px
+    font-family: $font-Roboto-Light
+    margin-bottom: 40px
+    line-height: 1.5
+    +ipad-down
+      font-size: 18px
+      margin-bottom: 27px
+      padding-left: 35px
+      letter-spacing: 0.4px
+
+    &:before
+      top: 5px
+      left: 17px
+      +ipad-down
+        left: 10px
+
+    .text
+      font-size: 18px
+      font-family: $font-Roboto-LightItalic
+    &.last
+      font-size: 20px
+      margin-right: 155px
+      +ipad-down
+        margin-right: 30px
+        margin-bottom: 16px
+      &:before
+        display: none
+
+  &-left
+    padding-left: 60px
+    padding-right: 0
+    +laptop-down
+      padding-left: 0px
+  &-right
+    position: relative
+    display: flex
+    justify-content: center
+

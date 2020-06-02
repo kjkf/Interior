@@ -116,6 +116,24 @@ h1.title, h2.title
 			width: 24px
 			height: 20px
 
+.phrase-grey
+	font-size: 16px
+	line-height: 22px
+	font-family: $font-HistoryPro-Two
+	text-transform: uppercase
+	position: relative
+	&:before
+		content: ''
+		position: absolute
+		top: 0px
+		left: -35px
+		+bg-image(26px, 26px, transparent, "../images/icons/right-quote_grey.svg", cover)
+		+ipad-down
+			width: 20px
+			height: 20px
+			top: 6px
+
+
 .text-brown
 	color: $lightbrown_3
 
@@ -170,3 +188,14 @@ h1.title, h2.title
 	font-family: $font-Roboto-Regular
 	text-transform: uppercase
 	border: 0px
+
+.mb-lg-50
+  +tablet
+    margin-bottom: 50px !important
+
+.mb-md-55
+  +tablet-down
+    margin-bottom: 55px !important
+
+.text-salmon
+  color: $salmon

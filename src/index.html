@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Interior</title>
-    <link rel="stylesheet" href="../public/css/normalize.css">
-    <link rel="stylesheet" href="../public/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../public/css/styles.min.css">
+    <link rel="stylesheet" href="public/css/normalize.css">
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/styles.min.css">
     <script src="https://api-maps.yandex.ru/2.1/?apikey=5519209e-311a-4ef7-85ed-5fb80e87b7ef&lang=ru_RU" type="text/javascript"></script>
 </head>
 <body>
@@ -502,9 +502,22 @@
         </div>
         <div class="works">
             <div class="row">
-                <div class="col-md-4 image-wrapper">
+                <div class="col-md-4 image-wrapper" data-photos="30">
                     <img src="../public/images/content/works/work1_1.jpg" alt="квартира в Бишкеке площадью 155 м2">
                     <span class="image-caption">квартира в Бишкеке площадью 155 м2</span>
+                    <div class="work-hover-block">
+                        <div class="content">
+                            <div class="hover-title-wrapper">
+                                <p>Выполнили:</p>
+                                <p>Авторский дизайн проект</p>
+                                <p>+ ремонт ПОД КЛЮЧ</p>
+                            </div>
+                            <button class="btn">Смотреть работу</button>
+                            <div class="hover-caption">
+                                (<span class="photos">30</span> фотографий + описание)
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4 image-wrapper">
                     <img src="../public/images/content/works/work1_2.jpg" alt="квартира 105 Серии площадь 65 м2">
@@ -678,6 +691,6 @@
 
     </div>
 </footer>
-<script src="../public/main.min.js"></script>
+<script src="public/main.min.js"></script>
 </body>
 </html>

@@ -17,6 +17,8 @@
     position: absolute
     right: 125px
     top: -110px
+    +laptop-down
+      right: 10px
 
   .content
     //padding-left: 580px
@@ -31,10 +33,17 @@
       position: absolute
       left: -13px
       top: 143px
+      line-height: 1
+      +laptop-down
+        font-size: 250px
+        left: 0
 
     .image-wrapper
       width: 40%
       padding: 0px 93px 69px 0
+      +laptop-down
+        width: 45%
+        padding: 0 20px 69px 0
       .image-frame
         border: 16px solid $lightbrown_2
         width: 100%
@@ -65,6 +74,8 @@
       padding-right: 80px
       margin-bottom: 43px
       position: relative
+      +laptop-down
+        padding-right: 20px
       &:before
         content: ''
         display: inline-block
@@ -84,5 +95,7 @@
 
   .footnote
     padding: 28px 32px 0
+    +laptop-down
+      padding-right: 10px
     &:before
       left: -3px

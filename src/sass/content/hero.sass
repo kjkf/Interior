@@ -8,6 +8,8 @@
   .content
     .container
       padding: 0 52px
+      +laptop-down
+        padding: 0 20px
 
   h1.title
     color: #ffffff
@@ -28,9 +30,13 @@
 .content__col--left
   max-width: 790px
   margin-right: 100px
+  +laptop-down
+    margin-right: 20px
 
 .advantages
   padding-right: 181px
+  +laptop-down
+    padding-right: 75px
   .row
     margin-bottom: 30px
     .col2 .advantage-item

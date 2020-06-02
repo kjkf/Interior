@@ -3,6 +3,8 @@
   position: relative
   color: #ffffff
   padding: 71px 0 20px
+  +laptop-down
+    padding-top: 45px
 
   .bg-dark
     width: 70%
@@ -14,12 +16,14 @@
     z-index: 1
 
   .bg-image
-    width: 928px
-    height: 669px
+    width: 50% //928px
+    //height: 669px
     position: absolute
     right: 0
     top: 0
     z-index: 1
+    +laptop-down
+      width: 48%
 
   img
     width: 100%
@@ -35,16 +39,23 @@
     z-index: 0
     -webkit-box-shadow: 3px 0px 7px 0px rgba(0,0,0,0.3)
     box-shadow: 3px 0px 7px 0px rgba(0,0,0,0.3)
+    +laptop-down
+      bottom: -54%
+      height: 110%
 
   .container
     position: relative
     z-index: 2
     max-width: 1300px
+    +laptop-down
+      max-width: 960px
 
   .content
     width: 63%
     padding-left: 92px
     margin-bottom: 78px
+    +laptop-down
+      padding-left: 30px
 
   .quote
     padding-right: 215px
@@ -52,6 +63,8 @@
     font-size: 18px
     line-height: 1.67
     margin-bottom: 30px
+    +laptop-down
+      padding-right: 80px
     &.quote--mb43
       margin-bottom: 43px
 
@@ -66,6 +79,8 @@
       position: absolute
       right: -124px
       bottom: -11px
+      +laptop-down
+        right: -75px
 
   .method-title
     line-height: 1
@@ -85,6 +100,9 @@
     text-transform: uppercase
     margin-left: -48px
     position: relative
+    +laptop-down
+      margin-left: -30px
+      padding-right: 105px
     &:before, &:after
       content: ''
       display: inline-block
@@ -102,6 +120,9 @@
   width: 45%
   margin-right: 170px
   padding-left: 59px
+  +laptop-down
+    padding-left: 0
+    margin-right: 55px
 
 .help-descr-text
   font-size: 14px
@@ -114,6 +135,9 @@
   background: transparent
   border: 1px solid #ffffff
   color: #a0a0a0
+  +laptop-down
+    width: 200px
+    padding: 10px 25px 15px 25px
 
 .btn-send
   padding: 12px 66px
@@ -122,6 +146,8 @@
   box-shadow: 0px 0px 4px 0px #DC9350
   border-radius: 0px
   margin-left: 18px
+  +laptop-down
+    padding: 12px 50px
 
 .numbers
   font-family: $font-HistoryPro-Two
@@ -134,6 +160,8 @@
   //line-height: 52px
 .years
   margin-right: 120px
+  +laptop-down
+    margin-right: 60px
 .years-descr
   color: #f0e3d7
   margin-left: 30px

@@ -2,6 +2,7 @@
   font-family: $font-Roboto-Light
   color: #ffffff
   margin-bottom: 145px
+  position: relative
 
   .header-row
     padding: 0 22px 0 13px
@@ -130,7 +131,62 @@
       background: $menu_brown
       width: 26px
 
+.header-menu.show
+  padding: 57px 346px 67px 50px
+  max-width: 53%
+  width: 53%
 
+.header-menu
+  position: absolute
+  width: 0
+  background-color: $blueblack2
+  top: 0
+  right: 0
+  z-index: 10
+  line-height: 1
+  font-size: 18px
+
+  .menu
+    //margin-right: 40px
+
+  .contact-info
+    margin: 0
+
+  .menu-title
+    color: #ffffff
+    margin-bottom: 25px
+
+  .menu-list
+    margin-top: -20px
+  .menu-item
+    width: 87%
+    list-style-type: none
+    a
+      color: #ffffff
+      display: inline-block
+      width: 100%
+      padding: 20px 0 5px
+
+      &:hover
+        text-decoration: none
+
+    &:hover, &.active
+      border-bottom: 1px solid $lightbrown_1
+      a
+        color: $lightbrown_1
+
+  .contact-info
+    font-size: 16px
+
+    .before-item.callUs
+      &:before
+        top: 0px
+
+    .askQuestions .socials
+      margin-bottom: 16px
+
+    .address
+      margin-top: 10px
 
 
 

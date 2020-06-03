@@ -5,6 +5,8 @@
   padding: 71px 0 20px
   +laptop-down
     padding-top: 45px
+  +tablet-down
+    padding-bottom: 50px
 
   .bg-dark
     width: 70%
@@ -14,6 +16,8 @@
     top: 0
     left: 0
     z-index: 1
+    +tablet-down
+      width: 100%
 
   .bg-image
     width: 50% //928px
@@ -24,6 +28,13 @@
     z-index: 1
     +laptop-down
       width: 48%
+    +tablet-down
+      width: 42%
+    +phone-down
+      width: 100%
+      top: 45%
+    +phonemin-down
+      top: 43%
 
   img
     width: 100%
@@ -42,6 +53,19 @@
     +laptop-down
       bottom: -54%
       height: 110%
+    +tablet-down
+      width: 270px
+      height: 161px
+      z-index: 1
+      bottom: 30px
+    +phone-down
+      width: 220px
+      bottom: 310px
+    +phonemin-down
+      width: 155px
+      height: 130px
+      bottom: 330px
+
 
   .container
     position: relative
@@ -49,6 +73,12 @@
     max-width: 1300px
     +laptop-down
       max-width: 960px
+    +tablet-down
+      max-width: 720px
+    +phone-down
+      max-width: 340px
+    +phonemin-down
+      max-width: 300px
 
   .content
     width: 63%
@@ -56,6 +86,13 @@
     margin-bottom: 78px
     +laptop-down
       padding-left: 30px
+    +tablet-down
+      width: 100%
+    +phone-down
+      padding: 0
+      margin-bottom: 340px
+    +phonemin-down
+      margin-bottom: 270px
 
   .quote
     padding-right: 215px
@@ -65,8 +102,21 @@
     margin-bottom: 30px
     +laptop-down
       padding-right: 80px
+    +tablet-down
+      padding-right: 287px
+    +phone-down
+      padding-right: 0px
+      font-size: 16px
+      margin-bottom: 22px
+    +phonemin-down
+      font-size: 14px
     &.quote--mb43
       margin-bottom: 43px
+      +tablet-down
+        margin-bottom: 80px
+      +phonemin-down
+        font-size: 13px
+
 
   .key-text
     font-family: $font-HistoryPro-Two
@@ -81,6 +131,12 @@
       bottom: -11px
       +laptop-down
         right: -75px
+      +tablet-down
+        right: 0
+        bottom: -55px
+      +phone-down
+        right: 15px
+        bottom: -55px
 
   .method-title
     line-height: 1
@@ -89,6 +145,12 @@
     text-transform: uppercase
     text-decoration: underline
     font-family: $font-HistoryPro-Two
+    +phone-down
+      margin-bottom: 30px
+      margin-left: -25px
+    +phonemin-down
+      margin-left: 0
+      font-size: 15px
 
   .method-descr
     border: 5px solid #ffffff
@@ -103,6 +165,16 @@
     +laptop-down
       margin-left: -30px
       padding-right: 105px
+    +phone-down
+      font-size: 23px
+      line-height: 40px
+      margin-left: -20px
+      margin-right: -30px
+      padding: 40px 0px
+    +phonemin-down
+      margin-right: -20px
+      font-size: 20px
+      padding: 20px 0
     &:before, &:after
       content: ''
       display: inline-block
@@ -116,6 +188,10 @@
       top: unset
       bottom: -5px
 
+.help-row
+  +phone-down
+    flex-direction: column-reverse
+
 .help-descr
   width: 45%
   margin-right: 170px
@@ -123,12 +199,22 @@
   +laptop-down
     padding-left: 0
     margin-right: 55px
+  +tablet-down
+    width: 100%
+  +phone-down
+    width: 100%
+    margin-right: 0
+    //padding: 0 30px
+    text-align: center
 
 .help-descr-text
   font-size: 14px
   line-height: 1.3
   width: 72%
   margin-bottom: 30px
+  +phone-down
+    width: 100%
+    text-align: left
 
 .form-field
   padding: 10px 34px 15px 30px
@@ -138,6 +224,9 @@
   +laptop-down
     width: 200px
     padding: 10px 25px 15px 25px
+  +phone-down
+    width: 250px
+    margin-bottom: 20px
 
 .btn-send
   padding: 12px 66px
@@ -148,31 +237,61 @@
   margin-left: 18px
   +laptop-down
     padding: 12px 50px
+  +phone-down
+    width: 250px
+    margin-left: 0
 
 .numbers
   font-family: $font-HistoryPro-Two
   font-size: 25px
   line-height: 1
   padding-top: 5px
+  +tablet-down
+    margin-left: 37%
+  +phone-down
+    font-size: 16px
+    //padding: 5px 20px 0
+    margin-bottom: 65px
+    margin-left: 0
 
 .large-text
   font-size: 165px
   //line-height: 52px
+  +tablet-down
+    font-size: 100px
+  +phonemin-down
+    font-size: 75px
+
 .years
   margin-right: 120px
   +laptop-down
     margin-right: 60px
+  +phonemin-down
+    margin-right: 30px
+    margin-left: 20px
 .years-descr
   color: #f0e3d7
   margin-left: 30px
+  +tablet-down
+    margin-left: 20px
   p
+    +phonemin-down
+      font-size: 16px
     &:first-child
       font-size: 50px
+      +tablet-down
+        font-size: 30px
+      +phonemin-down
+        font-size: 20px
 .col-3d
   color: #151a2b
+  text-align: center
   .large-text
     line-height: 150px
     padding-top: 6px
+    +tablet-down
+      line-height: 1
+      padding-top: 0
 
 .yellow-text
   color: $yellow

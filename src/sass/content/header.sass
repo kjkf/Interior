@@ -3,6 +3,8 @@
   color: #ffffff
   margin-bottom: 145px
   position: relative
+  +tablet-down
+    margin-bottom: 50px
 
   .header-row
     padding: 0 22px 0 13px
@@ -21,6 +23,12 @@
   font-family: $font-UniNeueBook
   text-align: left
   padding: 14px 42px
+  +tablet-down
+    width: 116px
+    height: 116px
+    font-size: 18px
+    padding: 10px 20px
+    line-height: 1.5
   &:before
     content: ''
     display: inline-block
@@ -32,22 +40,38 @@
     position: absolute
     bottom: -25px
     left: 0
+    +tablet-down
+      border-right: 108px solid transparent
+      bottom: -24px
 
-  span
-    display: inline-block
-    margin-bottom: 8px
-    &:last-child
-      margin-left: 10px
 
-  .big-text
-    color: #f2a704
-    font-size: 60px
-    line-height: 27px
-    font-family: $font-UniNeueBlack
+span.logo-span
+  display: inline-block
+  margin-bottom: 8px
+  &:last-child
+    margin-left: 10px
+
+.big-text.logo-span
+  color: #f2a704
+  font-size: 60px
+  line-height: 27px
+  font-family: $font-UniNeueBlack
 
 .logo-descr
   font-size: 14px
   line-height: 1.36
+  +tablet-down
+    font-size: 12px
+    line-height: 1.58
+    max-width: 142px
+    position: absolute
+    top: -16px
+    left: calc(50% - 71px)
+  +phonemin-down
+    max-width: 123px
+    font-size: 10px
+    left: calc(50% - 60px)
+
 
   color: $lightgrey
   width: 175px
@@ -57,10 +81,16 @@
 .col--right
   padding-top: 14px
   align-items: flex-start
+  +tablet-down
+    flex-direction: column-reverse
+    align-items: flex-end
 
 .contact_wrapper
   text-align: right
   margin-right: 14px
+  +tablet-down
+    margin-right: 0
+    margin-top: 30px
 
   p
     font-size: 14px
@@ -132,11 +162,22 @@
       width: 26px
 
 .header-menu.show
+  display: block
   padding: 57px 346px 67px 50px
-  max-width: 53%
-  width: 53%
+  max-width: 65%
+  width: 75%
+  +laptop-down
+    width: 75%
+    max-width: 100%
+    padding-right: 200px
+  +tablet-down
+    padding-right: 50px
+  +phone-down
+    padding: 10px 10px 67px
+    width: 100%
 
 .header-menu
+  display: none
   position: absolute
   width: 0
   background-color: $blueblack2
@@ -145,9 +186,46 @@
   z-index: 10
   line-height: 1
   font-size: 18px
+  +laptop-down
+    font-size: 14px
+  +tablet-down
+    font-size: 12px
 
-  .menu
-    //margin-right: 40px
+  h3.title
+    +phone-down
+      font-size: 18px
+    +phonemin-down
+      font-size: 16px
+
+  .menu-logo
+    max-width: 55px
+    max-height: 70px
+
+  .mobile-logo
+    display: none
+    +phone_down
+      display: flex
+      justify-content: center
+      margin-bottom: 20px
+      padding-top: 20px
+      position: relative
+    &:before
+      content: '\2716'
+      position: absolute
+      right: 10px
+      top: 10px
+      font-size: 20px
+      color: $lightbrown_1
+      cursor: pointer
+    .logo-descr
+      position: relative
+      top: unset
+      left: unset
+      padding-top: 0
+      +phone-down
+        font-size: 10px
+    .big-text
+      font-size: 35px
 
   .contact-info
     margin: 0
@@ -166,6 +244,8 @@
       display: inline-block
       width: 100%
       padding: 20px 0 5px
+      +phone-down
+        padding-top: 15px
 
       &:hover
         text-decoration: none
@@ -177,6 +257,11 @@
 
   .contact-info
     font-size: 16px
+    +laptop-down
+      font-size: 14px
+    +tablet-down
+      font-size: 12px
+
 
     .before-item.callUs
       &:before
@@ -188,34 +273,25 @@
     .address
       margin-top: 10px
 
+    .socials
+      +phonemin-down
+        width: 60%
 
+    .font-size16
+      +phone-down
+        font-size: 12px
 
+    .font-size18
+      +phone-down
+        font-size: 14px
+      +phonemin-down
+        font-size: 12px
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    .font-size25
+      +phone-down
+        font-size: 18px
+      +phonemin-down
+        font-size: 14px
 
 
 

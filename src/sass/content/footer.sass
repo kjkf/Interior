@@ -10,6 +10,10 @@
   .footer-title
     padding: 0px 25%
     margin-bottom: 86px
+    +tablet-down
+      padding: 0 5px 0 20px
+      text-align: left
+      margin-bottom: 30px
 
   .title
     color: #ffffff
@@ -18,18 +22,41 @@
   .subtitle
     font-size: 16px
 
+  .col-about
+    +tablet-down
+      order: 4
+      padding: 0 40px
+
   .contacts
     text-align: left
     padding: 0 8px
     line-height: 1.6
     margin-bottom: 61px
+    +tablet-down
+      margin-bottom: 45px
 
+  .contact-info
+    +tablet-down
+      //margin-left: 90px
+      //margin-bottom: 25px
+      margin: 0 auto 25px
+    +phone-down
+      margin: 0 10% 25px
+
+  .map-col
+    +tablet-down
+      margin-bottom: 30px
 
   .img-wrapper
     width: 100%
     min-height: 241px
     overflow: hidden
     border-radius: 5px
+    +tablet-down
+      min-width: 320px
+      min-height: fit-content
+    +phonemin-down
+      min-width: 275px
 
     img
       width: 100%
@@ -41,9 +68,14 @@
   .note
     text-align: left
     padding: 0 8px
+    +tablet-down
+      text-align: center
 
 #map
   width: 470px
   height: 240px
+  +tablet-down
+    width: 100%
+    height: 300px
 
 

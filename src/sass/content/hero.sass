@@ -4,17 +4,29 @@
   color: #fff
   background:
     image: url("../images/content/bg_hero.jpg")
+    repeat: no-repeat
+    size: cover
 
   .content
     .container
       padding: 0 52px
       +laptop-down
-        padding: 0 20px
+        padding: 0 20px 50px
+
+    .wrapper
+      flex-wrap: nowrap
+      +tablet-down
+        flex-direction: column
+        align-items: center
+        justify-content: center
 
   h1.title
     color: #ffffff
     text-transform: uppercase
     margin-bottom: 9px
+    +tablet-down
+      font-size: 18px
+      line-height: 1.8
 
   .subtitle
     color: $grey
@@ -23,6 +35,10 @@
     padding-right: 270px
     padding-left: 3px
     margin-bottom: 65px
+    +tablet-down
+      font-size: 14px
+      padding-right: 0
+      margin-bottom: 50px
 
 .lightbrown-text
   color: $lightbrown_1
@@ -32,22 +48,29 @@
   margin-right: 100px
   +laptop-down
     margin-right: 20px
+  +tablet-down
+    margin-right: 0
 
 .advantages
   padding-right: 181px
   +laptop-down
     padding-right: 75px
+  +tablet-down
+    padding-right: 0
   .row
     margin-bottom: 30px
     .col2 .advantage-item
-      //padding-right: 20px
+      padding-right: 25px
 
   .advantage-item
     font-size: 16px
     line-height: 1.25
     //padding-left: 50px
-    padding: 0 10px 0 54px
+    padding: 0 0px 0 54px
     position: relative
+    +tablet-down
+      font-size: 12px
+      padding: 0 10px 0 25px
     &:before
       content: ''
       display: inline-block
@@ -64,6 +87,9 @@
       position: absolute
       top: 0
       left: 0px
+      +tablet-down
+        width: 20px
+        height: 20px
 
   .smile
     position: relative
@@ -74,6 +100,8 @@
       left: 171px
       top: 40px
       +bg-image(20px, 20px, transparent, "../images/icons/wink.svg", cover)
+      +tablet-down
+        display: none
 
 .content__col--right
   display: flex
@@ -81,6 +109,8 @@
   align-items: center
   padding-top: 107px
   flex-direction: column
+  +tablet-down
+    padding-top: 0
 .caption
   font-size: 16px
   line-height: 1.3
@@ -122,7 +152,7 @@
     border-right: 85px solid transparent
     position: absolute
     left: 0
-    bottom: -45px
+    bottom: -44px
 
 .pentagon.mission-wrapper
   width: 184px
@@ -132,6 +162,7 @@
     border-top-color: rgba(255,255,255, .3)
     border-left: 92px solid transparent
     border-right: 92px solid transparent
+    bottom: -45px
 
 
 

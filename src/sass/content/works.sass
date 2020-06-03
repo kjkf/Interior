@@ -6,21 +6,39 @@
 
   .container
     padding: 0 23px 0 37px
+    +tablet-down
+      padding: 0 5px
 
   .section-title
     margin-bottom: 70px
+    +tablet-down
+      margin-bottom: 30px
   .title
     margin-bottom: 14px
     font-size: 30px
     line-height: 1
+    +tablet-down
+      font-size: 18px
+      width: 90%
+      line-height: 1.5
+      letter-spacing: 1px
 
   .subtitle
     max-width: 75%
+    +tablet-down
+      line-height: 1.7
+      min-width: 100%
+      margin-bottom: 35px
+      letter-spacing: 1px
 
   .note
     font-size: 14px
     line-height: 1.57
     position: relative
+    +tablet-down
+      padding-left: 25px
+      letter-spacing: 1px
+
     &:before
       content: ''
       display: inline-block
@@ -28,6 +46,8 @@
       position: absolute
       left: -29px
       top: 2px
+      +tablet-down
+        left: 0
 
   .works
     margin-bottom: 32px
@@ -79,21 +99,33 @@
   text-transform: uppercase
   font-family: $font-Roboto-Regular
   line-height: 1.5
+  +tablet-down
+    line-height: 1.8
 
   .about-works-text-23px
     font-size: 23px
+    +tablet-down
+      font-size: 19px
 
   .about-works-text-50px
     font-size: 50px
     line-height: 1
+    +tablet-down
+      font-size: 30px
 
   .about-works-text-24px
     font-size: 24px
+    +tablet-down
+      font-size: 18px
+      line-height: 1.5
 
   .about-works-text-17px
     font-size: 17px
     line-height: 1
     text-transform: none
+    +tablet-down
+      font-size: 15px
+      line-height: 1.5
 
 .work-hover-block
   position: absolute

@@ -4,6 +4,9 @@
   font-size: 18px
   line-height: 1.67
   margin-bottom: 93px
+  +tablet-down
+    font-size: 14px
+    margin-bottom: 0
 
   &:before, &:after
     content: ''
@@ -21,6 +24,8 @@
     background-position-x: -336px
     left: 0
     top: 0px
+    +tablet-down
+      display: none
 
   &:after
     width: 210px
@@ -29,15 +34,24 @@
     background-size: contain
     left: 23%
     top: 0
+    +tablet-down
+      width: 40px
+      height: 110px
+      left: unset
+      right: 20px
 
   .container
     padding: 132px 170px 130px 510px
     +laptop-down
       padding: 115px 30px 115px 450px
+    +tablet-down
+      padding: 60px 15px
 
   .title
     margin-bottom: 28px
     font-size: 30px
+    +tablet-down
+      font-size: 18px
 
   .method-descr
     margin-bottom: 35px
@@ -46,6 +60,9 @@
     padding-left: 30px
     padding-right: 70px
     position: relative
+    +tablet-down
+      font-size: 16px
+      padding-right: 0
     &:before
       content: ''
       display: inline-block

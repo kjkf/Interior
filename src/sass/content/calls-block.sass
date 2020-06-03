@@ -1,5 +1,7 @@
 .calls-block
   margin-bottom: 87px
+  +tablet-down
+    margin-bottom: 60px
 
   .container
     padding: 0 124px 0 141px
@@ -11,6 +13,9 @@
     margin: 0 auto
     padding: 50px 100px 23px
     text-align: center
+    +tablet-down
+      width: 100%
+      padding: 40px 50px 30px 30px
     background:
       image: url("../images/content/bg_calls-block.jpg")
       size: cover
@@ -19,12 +24,23 @@
   h3.title
     margin-bottom: 25px
     line-height: 1.3
+    +tablet-down
+      font-size: 14px
+      line-height: 24px
+      letter-spacing: 1px
   h4.title
     color: #ffffff
+    +tablet-down
+      font-size: 12px
 
   .calls-info
     margin-bottom: 17px
     padding: 0 46px
+    +tablet-down
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
 
   .phone-num
     width: 240px
@@ -34,6 +50,9 @@
     border-width: 0
     text-align: center
     margin-right: 29px
+    +tablet-down
+      margin-right: 0
+      margin-bottom: 15px
 
   .phone-btn
     background: #1d1c2e
@@ -42,6 +61,9 @@
     //padding: 15px 25px
     border-radius: 25px
     color: #ffffff
+    +tablet-down
+      width: 100%
+      max-width: 240px
 
   .whatsapp
     margin-top: 16px

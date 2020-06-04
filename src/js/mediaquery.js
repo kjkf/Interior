@@ -1,7 +1,8 @@
 
 (function () {
     const works = document.querySelector('.works');
-    let workSlider;
+    const algorithm = document.querySelector('.algorithm-step-in');
+    let workSlider, algorithmSlider;
 
     const mql1200 = window.matchMedia("(max-width: 1200px)");
     const mql768 = window.matchMedia("(max-width: 768px)");
@@ -10,13 +11,41 @@
 
     function handlerForMediaQueries(x) {
         if (mql768.matches) { // If media query matches
-            //console.log('mql768.matches');
+            console.log('mql768.matches');
             createWorkSlider();
+            createAlgorithmSlider();
         } else {
             //console.log('mql768.matches else');
             destroyWorkSlider();
+            destroyAlgorithmSlider();
         }
     }
+
+    function createAlgorithmSlider() {
+        const items = algorithm.querySelectorAll('.item');
+        algorithm.classList.remove('algorithm-step-in');
+        const wrapper = document.createElement('div');
+        wrapper.className = 'algorithm-slider';
+        items.forEach(item => {
+           wrapper.insertAdjacentElement('beforeend', item);
+        });
+        algorithm.innerHTML = '';
+        algorithm.insertAdjacentElement('beforeend', wrapper);
+
+        algorithmSlider = initiateSlider('.algorithm-slider');
+    }
+
+    function destroyAlgorithmSlider() {
+        const items = algorithm.querySelectorAll('.item[id]');
+        if (algorithmSlider) algorithmSlider.destroy();
+        algorithm.innerHTML = '';
+        algorithm.classList.add('algorithm-step-in');
+
+        items.forEach(item => {
+            algorithm.insertAdjacentElement('beforeend', item);
+        });
+    }
+
 
     function createWorkSlider() {
         const items = works.querySelectorAll('.image-wrapper');

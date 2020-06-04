@@ -1,0 +1,71 @@
+.save-us
+  padding-bottom: 70px
+  +phone-down
+    padding-bottom: 60px
+
+  &-bl
+    background-color: $lightgrey_1
+    min-height: 360px
+    padding: 60px 200px
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+    position: relative
+
+    +laptop-down
+      padding-left: 40px
+      padding-right: 40px
+
+    +phone-down
+      min-height: 310px
+      padding-bottom: 30px
+
+    &:after
+      content: ''
+      position: absolute
+      top: 0px
+      right: 40px
+      +bg-image(90px, 110px, transparent, "../images/icons/bookmark.svg", cover)
+      +ipad-down
+        right: 11px
+        width: 46px
+        height: 54px
+
+    .title
+      margin-bottom: 5px
+
+    .subtitle
+      font-size: 20px
+      margin-bottom: 15px
+      position: relative
+
+      +phone-down
+        font-size: 14px
+      //&:after
+        content: ''
+        position: absolute
+        bottom: 0px
+        left: 50%
+        margin-left: calc(-44px / 2)
+        +bg-image(44px, 40px, transparent, "../images/icons/heart.svg", contain)
+    .text
+      font-size: 15px
+      margin-top: 20px
+      margin-bottom: 20px
+      +phone-down
+        margin-top: 15px
+        margin-bottom: 6px
+
+    .save-text
+      font-size: 35px
+      font-family: $font-HistoryPro-Two
+      +phone-down
+        font-size: 20px
+
+.like
+  display: inline-block
+  background: transparent
+  +bg-image(44px, 40px, transparent, "../images/icons/heart.svg", contain)
+  border-radius: 0px
+  border: 0px

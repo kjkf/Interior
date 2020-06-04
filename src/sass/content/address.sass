@@ -1,0 +1,103 @@
+.address
+  color: $blueblack
+  padding-top: 12px
+  padding-bottom: 70px
+  font-size: 16px
+  +tablet-down
+    padding-top: 0px
+  +phone-down
+    font-size: 12px
+    padding-bottom: 60px
+
+  .title
+    margin-top: 5px
+    margin-bottom: 40px
+    +phone-down
+      margin-right: 85px
+      margin-bottom: 22px
+
+  &-img
+    width: 100%
+    img
+      width: 100%
+      height: auto
+
+  &-list
+    display: flex
+    flex-wrap: wrap
+    +tablet-down
+      justify-content: center
+    +phone-down
+      justify-content: flex-start
+
+  &-item
+    text-align: left
+    width: $address_item_w
+    position: relative
+    margin-top: calc(#{$address_itemic_w} + 15px)
+    margin-right: 40px
+    margin-bottom: 10px
+
+    +laptop-down
+      margin-right: 10px
+      width: 47%
+    +tablet-down
+      margin-right: 40px
+      width: $address_item_w
+    +phone-down
+      margin-right: 28px
+      width: 45%
+
+
+    &:nth-child(2n)
+      margin-right: 0px
+
+    &:before
+      content: ''
+      position: absolute
+      top: calc(-#{$address_itemic_w} - 15px)
+      left: 48%
+      margin-left: calc(-#{$address_itemic_w} / 2)
+      width: $address_itemic_w
+      height: $address_itemic_w
+      border-radius: 50%
+      +bg-image($address_itemic_w, $address_itemic_w, $lightbrown_1, "../images/icons/pin-white.svg", 60%)
+      background-position: center
+
+      +laptop-down
+        left: 50%
+      +tablet-down
+        left: 0px
+        margin-left: 0px
+
+  &-left
+    padding-left: 7px
+    padding-right: 0px
+    +tablet-down
+      margin-bottom: 20px
+
+  &-right
+    padding-left: 0px
+    padding-right: 0px
+
+.ic-pin
+  &:before
+    background-image: url("../images/icons/pin-white.svg")
+    //background-size: 28px 42px
+
+.ic-monolit
+  &:before
+    background-image: url("../images/icons/mall.svg")
+
+.ic-jam
+  &:before
+    background-image: url("../images/icons/traffic-jam.svg")
+
+.ic-parking
+  &:before
+    background-image: url("../images/icons/parking.svg")
+
+
+.save-us-wrap
+  padding-left: 0px
+  padding-right: 0px

@@ -59,8 +59,11 @@
 
     .image-wrapper
       position: relative
+      overflow: hidden
       img
         width: 100%
+      &:hover .image-caption
+        display: none
 
       .image-caption
         position: absolute
@@ -127,6 +130,10 @@
       font-size: 15px
       line-height: 1.5
 
+.work-hover-block.active
+  opacity: 1
+  transform: translate(0, 0)
+
 .work-hover-block
   position: absolute
   background-color: rgba(#000, .7)
@@ -141,6 +148,9 @@
   color: #ffffff
   text-align: center
   line-height: 1.375
+  opacity: 0
+  transform: translate(-40%, -40%)
+  transition: all 0.6s
 
   .content
     max-width: 230px

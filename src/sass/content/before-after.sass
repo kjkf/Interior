@@ -17,22 +17,34 @@
       padding: 0 35px
       letter-spacing: 1px
 
-  .before-after-imgs
+  .before-after-container
     //padding: 0 112px
     margin-top: 35px
     position: relative
+    min-width: 970px
+    min-height: 490px
+    border-radius: 5px
+    overflow: hidden
 
-    .img-wrapper
-      width: 484px
-      height: 485px
-      background: #dddddd
-      border-radius: 5px 0 0 5px
-      margin-right: 1px
+    .imageBox
+      width: 100%
+      height: 100%
+      overflow: hidden
+      position: absolute
+      top: 0
+      left: 0
       +tablet-down
         width: 49%
         height: 350px
-      &.right
-        border-radius: 0 5px 5px 0
+      &.imageAfter
+        width: 50%
+        //transition: 2s
+        overflow: hidden
+        border-right: 3px solid #ffffff
+
+      img
+        width: fit-content
+        height: 100%
 
   .controls
     display: flex
@@ -42,9 +54,11 @@
     height: 48px
     border-radius: 50%
     background: $lightbrown_1
-    position: absolute
-    top: calc(50% - 24px)
+    position: relative
+    //top: calc(50% - 24px)
+    top: 221px
     left: calc(50% - 24px)
+    z-index: 1000
 
   .control
     display: inline-block

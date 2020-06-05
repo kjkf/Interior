@@ -6,6 +6,7 @@
     <title>Interior</title>
     <link rel="stylesheet" href="public/css/normalize.css">
     <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="plugins/tiny-slider.css">
     <link rel="stylesheet" href="public/css/styles.min.css">
     <script src="https://api-maps.yandex.ru/2.1/?apikey=5519209e-311a-4ef7-85ed-5fb80e87b7ef&lang=ru_RU" type="text/javascript"></script>
 </head>
@@ -36,7 +37,7 @@
                 <li class="menu-item"><a href="#cheapfirm">Дешевая фирма</a></li>
                 <li class="menu-item"><a href="#smartdesign">Умное решение</a></li>
                 <li class="menu-item"><a href="#works">Портфолио</a></li>
-                <li class="menu-item"><a href="">Этапы работ</a></li>
+                <li class="menu-item"><a href="#algorithm">Этапы работ</a></li>
                 <li class="menu-item"><a href="#footer">Контакты</a></li>
             </ul>
         </div>
@@ -517,49 +518,49 @@
         </div>
         <div class="works">
             <div class="row">
-                <div class="col-md-4 image-wrapper" data-photos="30">
+                <div class="col-md-4 image-wrapper row1" data-photos="30">
                     <img src="../public/images/content/works/work1_1.jpg" alt="квартира в Бишкеке площадью 155 м2">
                     <span class="image-caption">квартира в Бишкеке площадью 155 м2</span>
                 </div>
-                <div class="col-md-4 image-wrapper" data-photos="28">
+                <div class="col-md-4 image-wrapper row1" data-photos="28">
                     <img src="../public/images/content/works/work1_2.jpg" alt="квартира 105 Серии площадь 65 м2">
                     <span class="image-caption">квартира 105 Серии площадь 65 м2</span>
                 </div>
-                <div class="col-md-4 image-wrapper top-left" data-photos="32">
+                <div class="col-md-4 image-wrapper row1 top-left" data-photos="32">
                     <img src="../public/images/content/works/work1_3.jpg" alt="квартира в стиле лофт площадью 120 м2">
                     <span class="image-caption image-caption--large">квартира в стиле лофт площадью 120 м2</span>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6 image-wrapper" data-photos="30">
+                <div class="col-md-6 image-wrapper row2" data-photos="30">
                     <img src="../public/images/content/works/work2_1.jpg" alt="Частный дом в стиле hi-tech площадью 122м2">
                     <span class="image-caption">Частный дом в стиле hi-tech площадью 122м2</span>
                 </div>
-                <div class="col-md-6 image-wrapper" data-photos="30">
+                <div class="col-md-6 image-wrapper row2" data-photos="30">
                     <img src="../public/images/content/works/work2_2.jpg" alt="коттедж на иссык-куле площадью 1022м2">
                     <span class="image-caption">коттедж на иссык-куле площадью 1022м2</span>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-8 image-wrapper bottom-right" data-photos="30">
+                <div class="col-md-8 image-wrapper row3 bottom-right" data-photos="30">
                     <img src="../public/images/content/works/work3_1.jpg" alt="Баткетный зал г.талас">
                     <span class="image-caption image-caption--small">Баткетный зал г.талас</span>
                 </div>
-                <div class="col-md-4 image-wrapper top-left" data-photos="30">
+                <div class="col-md-4 image-wrapper row3 top-left" data-photos="30">
                     <img src="../public/images/content/works/work3_2.jpg" alt="Блинница">
                     <span class="image-caption">Блинница</span>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4 image-wrapper" data-photos="30">
+                <div class="col-md-4 image-wrapper row4" data-photos="30">
                     <img src="../public/images/content/works/work4_1.jpg" alt="бутик женской одежды ">
                     <span class="image-caption">бутик женской одежды</span>
                 </div>
-                <div class="col-md-4 image-wrapper" data-photos="30">
+                <div class="col-md-4 image-wrapper row4" data-photos="30">
                     <img src="../public/images/content/works/work4_2.jpg" alt="бутик детской одежды площадь 65 м2">
                     <span class="image-caption image-caption--large">бутик детской одежды площадь 65 м2</span>
                 </div>
-                <div class="col-md-4 image-wrapper" data-photos="30">
+                <div class="col-md-4 image-wrapper row4" data-photos="30">
                     <img src="../public/images/content/works/work4_3.jpg" alt="офис площадью 120 м2">
                     <span class="image-caption">офис<br> площадью 120 м2</span>
                 </div>
@@ -612,7 +613,7 @@
         </div>
     </div>
 </div>
-<div class="algorithm">
+<div class="algorithm" id="algorithm">
     <div class="container">
         <h2 class="title">Как будет создаваться ваш революционный дизайн проект?</h2>
         <div class="algorithm-wrap">
@@ -833,6 +834,7 @@
         </div>
     </div>
 </script>
+<script src="plugins/tiny-slider.js"></script>
 <script src="public/main.min.js"></script>
 </body>
 </html>

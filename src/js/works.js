@@ -3,6 +3,8 @@
     const portfolio = document.querySelector('.works');
     const works = portfolio.querySelectorAll('.image-wrapper');
     const hoverTemplate = document.getElementById('workHoverTemplate').innerHTML;
+    const portfolioTemplate = document.getElementById('portfolio01').innerHTML;
+    const overlay = document.querySelector('.overlay');
 
     works.forEach(work =>{
         const photos = work.dataset.photos;
@@ -28,8 +30,24 @@
         const btn = wrapper.querySelector('.btn');
         btn.addEventListener('click', e => {
             console.log('Смотреть работу');
+            overlay.innerHTML = portfolioTemplate;
+
+            overlay.style.display = 'block';
+            overlay.style.overflowY = 'auto';
+            document.body.style.overflowY = 'hidden';
+
+
         });
 
         return wrapper;
     }
+
+    const portfolioJSON = {
+        "project-name": {
+            "bedroom": 20,
+            "livingroom": 5,
+            "test": 1
+        }
+    };
+    console.log(portfolioJSON);
 })();

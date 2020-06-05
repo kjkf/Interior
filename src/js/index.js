@@ -22,6 +22,12 @@
 
     document.documentElement.addEventListener('click', e => {
         e.stopPropagation();
-        closeBtn.click();
+        if (e.target === overlay) {
+            closeBtn.click();
+            document.body.style.overflowY = 'auto';
+            overlay.style.overflowY = 'hidden';
+            overlay.innerHTML = '';
+        }
+
     })
 })();

@@ -37,6 +37,12 @@ task('copy:html', () => {
         .pipe(reload({ stream: true }));
 });
 
+task('copy:asserts', () => {
+    return src('src/asserts/**/*.*')
+        .pipe(dest('dist/public/asserts'))
+        .pipe(reload({ stream: true }));
+});
+
 task('copy:php', () => {
     return src('src/*.php')
         .pipe(dest('dist'))
@@ -162,6 +168,7 @@ task('watch', () => {
     watch('./src/js/**/*.js', series("scripts"));
     watch('./src/*.html', series("copy:html"));
     watch('./src/*.php', series("copy:php"));
+    watch('./src/asserts/**/*.*', series("copy:asserts"));
     watch('./src/plugins/**/*.*', series("copy:plugins"));
     watch('./src/assets/*.*', series("copy:assets"));
     watch('./src/*.ico', series("copy:favicon"));
@@ -175,13 +182,13 @@ task('watch', () => {
 //================================================================================================
 task(
     "default",
-    series('clean', parallel('copy:html', 'copy:plugins', 'copy:php', 'copy:favicon', 'copy:fonts', 'copy:images', 'copy:icons', 'copy:css', 'copy:assets', 'styles', 'icons', 'scripts'),
+    series('clean', parallel('copy:html', 'copy:plugins', 'copy:php', 'copy:asserts', 'copy:favicon', 'copy:fonts', 'copy:images', 'copy:icons', 'copy:css', 'copy:assets', 'styles', 'icons', 'scripts'),
         parallel('watch', 'server')
     )
 );
 
 task(
     "build",
-    series('clean', parallel('copy:html', 'copy:plugins', 'copy:php', 'copy:favicon', 'copy:fonts', 'copy:images', 'copy:icons', 'copy:css', 'copy:assets', 'styles', 'icons', 'scripts')
+    series('clean', parallel('copy:html', 'copy:plugins', 'copy:php', 'copy:asserts', 'copy:favicon', 'copy:fonts', 'copy:images', 'copy:icons', 'copy:css', 'copy:assets', 'styles', 'icons', 'scripts')
     )
 );

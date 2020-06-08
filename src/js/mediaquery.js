@@ -54,6 +54,9 @@
         items.forEach(item => {
             const div = document.createElement('div');
             div.className = 'slider-item';
+            const className = item.classList.value.match(/col-md-\d/);
+            item.classList.remove(className);
+            //console.log(item);
             div.insertAdjacentElement('beforeend', item);
             wrapper.insertAdjacentElement('beforeend', div);
         });
@@ -73,12 +76,17 @@
         let row4 = createRow();
         items.forEach((item) => {
             if (item.classList.contains('row1')) {
+                item.classList.add('col-md-4');
                 row1.insertAdjacentElement('beforeend', item);
             } else if (item.classList.contains('row2')) {
+                item.classList.add('col-md-6');
                 row2.insertAdjacentElement('beforeend', item);
             } else if (item.classList.contains('row3')) {
+                const className = item.classList.contains('bottom-right') ? 'col-md-8' : 'col-md-4';
+                item.classList.add(className);
                 row3.insertAdjacentElement('beforeend', item);
             } else if (item.classList.contains('row4')) {
+                item.classList.add('col-md-4');
                 row4.insertAdjacentElement('beforeend', item);
             }
 

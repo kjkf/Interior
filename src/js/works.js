@@ -30,8 +30,10 @@
         const photosSpan = wrapper.querySelector('.photos');
         photosSpan.innerHTML = photos;
         const btn = wrapper.querySelector('.btn');
+
         btn.addEventListener('click', e => {
             console.log('Смотреть работу - ', `portfolio${portfolioNum}`);
+            //animateButton(e);
             const portfolioTemplate = document.getElementById(`portfolio${portfolioNum}`).innerHTML;
             overlay.innerHTML = portfolioTemplate;
 
@@ -39,7 +41,8 @@
             overlay.style.overflowY = 'auto';
             document.body.style.overflowY = 'hidden';
 
-
+            const phoneBtn = overlay.querySelector('.phone-btn.bubbly-button');
+            phoneBtn.addEventListener('click', animateButton, false);
         });
 
         return wrapper;

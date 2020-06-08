@@ -1,6 +1,6 @@
 
 var animateButton = function(e) {
-    //console.log(e.target, '====');
+    //console.log(e.target, ' ==== animateButton');
     e.preventDefault;
     //reset animation
     e.target.classList.remove('animate');

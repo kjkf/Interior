@@ -29,6 +29,7 @@
     font-size: 18px
     padding: 10px 20px
     line-height: 1.5
+
   &:before
     content: ''
     display: inline-block
@@ -43,7 +44,6 @@
     +tablet-down
       border-right: 108px solid transparent
       bottom: -24px
-
 
 span.logo-span
   display: inline-block
@@ -91,6 +91,9 @@ span.logo-span
   +tablet-down
     margin-right: 0
     margin-top: 30px
+  +phone-down
+    display: flex
+    flex-direction: column
 
   p
     font-size: 14px

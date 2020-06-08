@@ -40,6 +40,7 @@
             overlay.style.display = 'block';
             overlay.style.overflowY = 'auto';
             document.body.style.overflowY = 'hidden';
+            overlay.scrollTo(0, 0);
 
             const phoneBtn = overlay.querySelector('.phone-btn.bubbly-button');
             phoneBtn.addEventListener('click', animateButton, false);

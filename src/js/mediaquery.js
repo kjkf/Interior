@@ -11,7 +11,7 @@
 
     function handlerForMediaQueries(x) {
         if (mql768.matches) { // If media query matches
-            console.log('mql768.matches');
+            //console.log('mql768.matches');
             createWorkSlider();
             createAlgorithmSlider();
         } else {

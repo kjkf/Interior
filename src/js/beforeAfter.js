@@ -6,7 +6,6 @@
     let shiftX;
     const md = new MobileDetect(window.navigator.userAgent);
     const isMobile = md.mobile();
-
     control.onmousedown = function(event) {
         event.preventDefault(); // предотвратить запуск выделения (действие браузера)
 
@@ -24,7 +23,8 @@
     };
 
     function onMouseMove(event) {
-        let newLeft = event.clientX - shiftX - container.getBoundingClientRect().left;
+        const clientX = isMobile ? event.touches[0].clientX : event.clientX;
+        let newLeft = clientX - shiftX - container.getBoundingClientRect().left;
 
         // курсор вышел из слайдера => оставить бегунок в его границах.
         if (newLeft < -(control.offsetWidth/2)) {
@@ -43,12 +43,12 @@
         return false;
     };
 
-    console.log(isMobile);
+    //console.log(isMobile);
     if (isMobile) {
         control.ontouchstart = function(event) {
             event.preventDefault(); // предотвратить запуск выделения (действие браузера)
 
-            shiftX = event.clientX - control.getBoundingClientRect().left;
+            shiftX = event.touches[0].clientX - control.getBoundingClientRect().left;
             // shiftY здесь не нужен, слайдер двигается только по горизонтали
 
             document.addEventListener('touchmove', onMouseMove);

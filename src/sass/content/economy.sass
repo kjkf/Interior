@@ -10,6 +10,7 @@
   color: #f5f5f5
   +tablet-down
     padding-top: 50px
+    padding-bottom: 0px
     background-attachment: scroll
 
 
@@ -52,9 +53,12 @@
 
   .economy-img
     display: inline-block
-    max-width: 636px
-    margin-top: -90px
-    margin-left: 25px
+    max-width: 586px
+    //margin-top: -90px
+    //margin-left: 25px
+    position: absolute
+    top: 0
+    left: 0
     +laptop-down
       margin-left: 0px
     +tablet-down
@@ -64,9 +68,33 @@
       width: 100%
       height: auto
 
+
   &-left
+    +tablet-down
+      margin-bottom: 45px
     +phone-down
       padding: 0px 8px
 
   &-right
     text-align: center
+    +tablet-down
+      display: flex
+      justify-content: center
+
+.ic-leaf
+  position: absolute
+  top: -150px
+  left: -100px
+  +bg-image(370px, 400px, transparent, "../images/icons/leaf-left.png", contain)
+  transform: scale(-1, 1) rotate(-45deg)
+  +tablet-down
+    width: 200px
+
+.economy-img-wrap
+  position: relative
+  +tablet-down
+    display: block
+    height: 200px
+    width: 200px
+
+

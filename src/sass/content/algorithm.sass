@@ -57,6 +57,11 @@
       background-color: $lightbrown_2
     &--br
       border: 10px solid $lightbrown_2
+      +tablet-down
+        max-height: 238px
+        height: 238px
+        padding: 18px 23px 23px 23px
+        width: 100% !important
       &:after
         display: none
       .algorithm-step-item__in
@@ -123,7 +128,11 @@
 .algorithm-discount
   color: #1d1c2e
   +tablet-down
-    order: -1
+    max-height: 238px
+    height: 238px
+    padding: 18px 23px 23px 23px
+    width: 100% !important
+
   &__in
     height: 100%
     display: flex

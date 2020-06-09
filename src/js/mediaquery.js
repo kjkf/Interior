@@ -25,25 +25,42 @@
         const items = algorithm.querySelectorAll('.item');
         algorithm.classList.remove('algorithm-step-in');
         const wrapper = document.createElement('div');
+        let discountItem, brItem;
         wrapper.className = 'algorithm-slider';
         items.forEach(item => {
-           wrapper.insertAdjacentElement('beforeend', item);
+            if (item.classList.contains('algorithm-discount')) {
+                discountItem = item;
+            } else if (item.classList.contains('algorithm-step-item--br')) {
+                brItem = item;
+            } else {
+                wrapper.insertAdjacentElement('beforeend', item);
+            }
         });
         algorithm.innerHTML = '';
         algorithm.insertAdjacentElement('beforeend', wrapper);
+        algorithm.insertAdjacentElement('beforebegin', discountItem);
+        algorithm.insertAdjacentElement('afterend', brItem);
 
         algorithmSlider = initiateSlider('.algorithm-slider');
     }
 
     function destroyAlgorithmSlider() {
         const items = algorithm.querySelectorAll('.item[id]');
+        const discountItem = document.querySelector('.item.algorithm-discount');
+        const brItem = document.querySelector('.item.algorithm-step-item--br');
+
         if (algorithmSlider) algorithmSlider.destroy();
         algorithm.innerHTML = '';
         algorithm.classList.add('algorithm-step-in');
 
-        items.forEach(item => {
+        items.forEach((item, index) => {
             algorithm.insertAdjacentElement('beforeend', item);
+            if (index === 1) {
+                algorithm.insertAdjacentElement('beforeend', discountItem);
+            }
         });
+
+        algorithm.insertAdjacentElement('beforeend', brItem);
     }
 
 

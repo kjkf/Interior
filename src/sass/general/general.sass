@@ -17,7 +17,7 @@ body
 	margin: 0
 	padding: 0
 	height: 100vh
-	background-color: red //$body_bg
+	background-color: $body_bg
 	+phone-down
 		font-size: $fontSize_body_mob
 
@@ -55,12 +55,10 @@ a
     color: inherit
 
 .container
-	//background-color: blue
 	+laptop
 		max-width: 1230px
 		padding-left: 30px
 		padding-right: 30px
-		//background-color: aqua
 	+phone-down
 		padding-left: 10px
 		padding-right: 10px

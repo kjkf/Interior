@@ -2,13 +2,17 @@
   padding-top: 0px
   padding-bottom: 20px
   counter-reset: num
+  .container
+    +phone-down
+      padding: 0px
 
   h2.title
     text-align: center
     padding: 0px 260px
     margin-bottom: 57px
     +tablet-down
-      padding: 0px
+      padding: 0px 5px
+      font-size: 17px
 
   &-step-in
     display: flex
@@ -145,6 +149,8 @@
     padding: 0px
     margin: 0px
     margin-top: -33px
+    +phonemin-down
+      font-size: 125px
   .text
     font-size: 14px
     padding-left: 10px

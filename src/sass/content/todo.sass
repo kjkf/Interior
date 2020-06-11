@@ -45,11 +45,31 @@
     //background-color: #f0efed
     +tablet-down
       position: absolute
-      top: 50px
+      top: 0px
       right: 23px
     +phone-down
       right: 3px
+      top: 10px
 
+  .bg-txt
+    &:before
+      content: 'че делать?'
+      font-size: $bgText_h
+      color: rgba(41, 32, 27, 0.015)
+      display: flex
+      justify-content: flex-start
+      align-items: center
+      width: 100%
+      height: 90%
+      letter-spacing: 5px
+      text-transform: uppercase
+      +laptop-down
+        font-size: $bgText_h_laptop
+        justify-content: center
+      +ipad-down
+        font-size: $bgText_h_tablet
+      +phone-down
+        display: none
 
 .rect
   display: inline-block
@@ -105,25 +125,8 @@
       height: 140px
       left: unset
       right: 11px
+      top: 0px
+    //+phone-down
       top: 33px
 
-.bg-text
-  font-family: $font-HistoryPro-Two
-  font-size: $bgText_h
-  line-height: 1
-  color: rgba(41, 32, 27, 0.015)
-  position: absolute
-  display: flex
-  justify-content: flex-start
-  align-items: center
-  width: 100%
-  height: 90%
-  letter-spacing: 5px
-  text-transform: uppercase
-  +laptop-down
-    font-size: $bgText_h_laptop
-    justify-content: center
-  +ipad-down
-    font-size: $bgText_h_tablet
-  +phone-down
-    display: none
+

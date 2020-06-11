@@ -17,7 +17,7 @@ body
 	margin: 0
 	padding: 0
 	height: 100vh
-	background-color: $body_bg
+	background-color: red //$body_bg
 	+phone-down
 		font-size: $fontSize_body_mob
 
@@ -55,7 +55,7 @@ a
     color: inherit
 
 .container
-	//background-color: red
+	//background-color: blue
 	+laptop
 		max-width: 1230px
 		padding-left: 30px
@@ -258,3 +258,14 @@ h1.title, h2.title
 .anim-jump
   &:before, &:after
     animation: jampTrf 4.5s infinite linear
+
+.bg-txt
+  position: relative
+  &:before
+    content: ''
+    display: inline-block
+    font-family: $font-HistoryPro-Two
+    font-size: 293px
+    color: #f6f6f6
+    position: absolute
+    line-height: 1

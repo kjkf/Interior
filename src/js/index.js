@@ -29,5 +29,9 @@
             overlay.innerHTML = '';
         }
 
-    })
+    });
+
+    $(".phone-num").mask("+ 996 (ddd) dd dd dd", {
+        autoclear: false
+    });
 })();

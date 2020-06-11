@@ -44,6 +44,11 @@
 
             const phoneBtn = overlay.querySelector('.phone-btn.bubbly-button');
             phoneBtn.addEventListener('click', animateButton, false);
+
+            console.log($(".portfolio-wrapper .phone-num"));
+            $(".portfolio-wrapper .phone-num").mask("+ 996 (ddd) dd dd dd", {
+                autoclear: false
+            });
         });
 
         return wrapper;

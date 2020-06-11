@@ -9,7 +9,7 @@
   .container
     padding-left: 107px
     +tablet-down
-      padding-left: 0
+      padding-left: 10px
 
   .cooperative-row
     justify-content: space-between
@@ -25,6 +25,8 @@
     +tablet-down
       padding: 0 20px
       margin-top: 35px
+    +phone-down
+      padding: 0 10px
 
   .title
     margin-bottom: 30px
@@ -36,9 +38,10 @@
     height: 426px
     margin: 0 -15px
     +laptop-down
-      width: 450px
-      min-height: 415px
-      height: fit-content
+      max-width: 530px
+      max-height: 415px
+      width: 100%
+      height: auto
     +tablet-down
       width: 100%
       height: auto

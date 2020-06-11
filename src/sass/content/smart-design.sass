@@ -56,7 +56,8 @@
       bottom: -54%
       height: 116%
     +tablet-down
-      width: 270px
+      //width: 270px
+      width: 50%
       height: 161px
       z-index: 1
       bottom: 30px
@@ -78,9 +79,9 @@
     +tablet-down
       max-width: 720px
     +phone-down
-      max-width: 340px
+      //max-width: 340px
     +phonemin-down
-      max-width: 300px
+      //max-width: 300px
 
   .content
     width: 63%
@@ -148,10 +149,11 @@
     text-decoration: underline
     font-family: $font-HistoryPro-Two
     +phone-down
+      text-align: center
       margin-bottom: 30px
-      margin-left: -25px
+      //margin-left: -25px
     +phonemin-down
-      margin-left: 0
+      //margin-left: 0
       font-size: 15px
 
   .method-descr
@@ -170,11 +172,12 @@
     +phone-down
       font-size: 23px
       line-height: 40px
-      margin-left: -20px
-      margin-right: -30px
+      //margin-left: -20px
+      //margin-right: -30px
+      margin-left: 0px
       padding: 40px 0px
     +phonemin-down
-      margin-right: -20px
+      //margin-right: -20px
       font-size: 20px
       padding: 20px 0
     &:before, &:after
@@ -215,7 +218,8 @@
   width: 72%
   margin-bottom: 30px
   +phone-down
-    width: 100%
+    display: inline-block
+    width: 90%
     text-align: left
 
 .form-field
@@ -255,6 +259,10 @@
     //padding: 5px 20px 0
     margin-bottom: 65px
     margin-left: 0
+  .row
+    +phone-down
+      margin-left: 0px
+      margin-right: 0px
 
 .large-text
   font-size: 165px
@@ -268,14 +276,16 @@
   margin-right: 120px
   +laptop-down
     margin-right: 60px
+  +phone-down
+    margin-left: 10px
   +phonemin-down
     margin-right: 30px
-    margin-left: 20px
+    //margin-left: 20px
 .years-descr
   color: #f0e3d7
   margin-left: 30px
   +tablet-down
-    margin-left: 20px
+    margin-left: 10px
   p
     +phonemin-down
       font-size: 16px

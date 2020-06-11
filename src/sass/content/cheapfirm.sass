@@ -47,6 +47,9 @@
     +ipad-down
       position: static
       margin-bottom: 32px
+    +phonemin-down
+      width: 90%
+
     &:last-child
       +ipad-down
         margin-bottom: 36px
@@ -62,7 +65,8 @@
         min-height: calc(100% - 16px)
         border-radius: 4px
         box-shadow: 8px 10px rgba(255, 255, 255, 0.43), 18px 20px rgba(255, 255, 255, 0.16)
-
+        +phonemin-down
+          width: 100%
 
     &:first-child
       top: -213px

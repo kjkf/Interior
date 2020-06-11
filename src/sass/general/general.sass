@@ -55,12 +55,10 @@ a
     color: inherit
 
 .container
-	//background-color: red
 	+laptop
 		max-width: 1230px
 		padding-left: 30px
 		padding-right: 30px
-		//background-color: aqua
 	+phone-down
 		padding-left: 10px
 		padding-right: 10px
@@ -258,3 +256,14 @@ h1.title, h2.title
 .anim-jump
   &:before, &:after
     animation: jampTrf 4.5s infinite linear
+
+.bg-txt
+  position: relative
+  &:before
+    content: ''
+    display: inline-block
+    font-family: $font-HistoryPro-Two
+    font-size: 293px
+    color: #f6f6f6
+    position: absolute
+    line-height: 1

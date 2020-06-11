@@ -26,29 +26,26 @@
     +tablet-down
       display: none
 
-  .content
-    //padding-left: 580px
-    position: relative
+  .bg-txt
     &:before
       content: 'O HAC'
-      display: inline-block
-      z-index: -1
-      font-family: $font-HistoryPro-Two
       font-size: 293px
       color: #f6f6f6
-      position: absolute
       left: -13px
       top: 143px
-      line-height: 1
+      z-index: -1
       +laptop-down
         font-size: 250px
         left: 0
+      +tablet-down
+        font-size: 185px
       +phone-down
         font-size: 150px
         text-align: center
       +phonemin-down
         font-size: 110px
-
+  .content
+    //padding-left: 580px
     .image-wrapper
       width: 40%
       padding: 0px 93px 69px 0
@@ -57,11 +54,11 @@
         padding: 0 20px 69px 0
       +tablet-down
         position: absolute
-        width: 115px
-        height: 152px
+        width: 99px
+        height: 142px
         padding: 0
-        top: 0
-        right: 0px
+        top: 15px
+        right: -10px
       .image-frame
         border: 16px solid $lightbrown_2
         width: 100%
@@ -69,8 +66,8 @@
         position: relative
         +tablet-down
           border-width: 5px
-          width: 115px
-          height: 138px
+          width: 92px
+          height: 117px
         &:before
           content: ''
           width: 425px
@@ -84,8 +81,8 @@
           left: -53px
           top: 27px
           +tablet-down
-            width: 115px
-            height: 154px
+            width: 99px
+            height: 132px
             left: -8px
             top: 8px
 

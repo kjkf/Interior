@@ -78,16 +78,18 @@
 <div class="calls-block calls-block--portf">
     <div class="container">
         <div class="content">
-            <h3 class="title">Получите бесплатную консультацию нашего дизайнера прямо сейчас</h3>
-            <div class="row calls-info">
-                <input type="text" class="phone-num" placeholder="Ваш номер">
-                <button class="btn phone-btn bubbly-button bubbly-button-camel">Отправить</button>
-            </div>
-            <p class="text">Звоните, мы сейчас работаем</p>
-            <a href="tel:0555887799" class="our_phone">+996 555 88 77 99</a>
-            <p class="text font-history">или</p>
-            <p class="text">прямо сейчас напишете нам в ватсап</p>
-            <a href="https://api.whatsapp.com/send?phone=996501611711" title="Написать в WhatsApp" class="whatsapp"></a>
+            <form action="mail.php" method="POST" id="appl_form13" name="appl_form13" class="needs-validation" novalidate>
+                <h3 class="title">Получите бесплатную консультацию нашего дизайнера прямо сейчас</h3>
+                <div class="row calls-info">
+                    <input type="text" class="phone-num form-control" name="user_phone"  placeholder="Ваш номер" required>
+                    <button type="submit" class="btn phone-btn bubbly-button bubbly-button-camel">Отправить</button>
+                </div>
+                <p class="text">Звоните, мы сейчас работаем</p>
+                <a href="tel:0555887799" class="our_phone">+996 555 88 77 99</a>
+                <p class="text font-history">или</p>
+                <p class="text">прямо сейчас напишете нам в ватсап</p>
+                <a href="https://api.whatsapp.com/send?phone=996501611711" title="Написать в WhatsApp" class="whatsapp"></a>
+            </form>
         </div>
     </div>
 </div>

@@ -48,11 +48,12 @@ h4
 	line-height: $lineHeight_h4
 
 a
-  display: inline-block
-  text-decoration: none
-  color: inherit
-  &:hover, &:active
-    color: inherit
+	display: inline-block
+	text-decoration: none
+	color: inherit
+	&:hover, &:active
+		text-decoration: none
+		color: inherit
 
 .container
 	+laptop
@@ -267,3 +268,9 @@ h1.title, h2.title
     color: #f6f6f6
     position: absolute
     line-height: 1
+
+.btn-show.btn
+	background-color: red
+	box-shadow: 0px 4px 0px 0px rgba(220,147,80,1)
+	font-size: 16px
+	color: #1d1c2e

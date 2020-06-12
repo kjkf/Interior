@@ -307,15 +307,6 @@
                 <span class="font-weight-bolder">Не закажите ничего лишнего.</span>
                 И самое  главное - <span class="font-weight-bolder">вас никто не сможет обмануть.</span>
                 </p>
-                <div class="text-center d-lg-block d-md-none d-sm-none d-none">
-                    <div class="shadow-wrap">
-                        <button type="button" class="btn shadow btn-yellow">
-                            <span class="btn__blik"></span>
-                            Хочу сэкономить
-                        </button>
-                        <div class="db-brd shadow"></div>
-                    </div>
-                </div>
             </div>
             <div class="col-md-12 col-lg-7 economy-right">
                 <div class="economy-img-wrap">
@@ -448,8 +439,10 @@
                     Просто оставьте свой номер, мы перезвоним,
                     все обсудим и все станет на свои места :)
                 </div>
-                <input type="text" class="form-field phone-num" placeholder="Ваш номер">
-                <button class="btn btn-send"><span class="btn__blik"></span>Отправить</button>
+                <form action="mail.php" method="POST" id="appl_form1" name="appl_form1" class="needs-validation" novalidate>
+                    <input type="text" class="form-control form-field phone-num" name="user_phone" placeholder="Ваш номер" required >
+                    <button type="submit" name="submit" class="btn btn-send"><span class="btn__blik"></span>Отправить</button>
+                </form>
             </div>
             <div class="numbers">
                 <div class="row">
@@ -583,18 +576,20 @@
 <div class="calls-block">
     <div class="container">
         <div class="content">
-            <h3 class="title">
-                поэтому оставьте свой номер, договримся на
-                удобное для вас время И покажем все наши
-                проекты на большом экране
-            </h3>
-            <div class="row calls-info">
-                <input type="text" class="phone-num" placeholder="Ваш номер">
-                <button class="btn phone-btn bubbly-button-dark bubbly-button">Отправить</button>
-            </div>
-            <h4 class="title">или</h4>
-            <h4 class="title">прямо сейчас напишете нам в ватсап</h4>
-            <a href="https://api.whatsapp.com/send?phone=996501611711" title="Написать в WhatsApp" class="whatsapp"></a>
+            <form action="mail.php" method="POST" id="appl_form2" name="appl_form2" class="needs-validation" novalidate>
+                <h3 class="title">
+                    поэтому оставьте свой номер, договримся на
+                    удобное для вас время И покажем все наши
+                    проекты на большом экране
+                </h3>
+                <div class="row calls-info">
+                    <input type="text" class="form-control phone-num" name="user_phone" placeholder="Ваш номер" required>
+                    <button type="submit" name="submit" class="btn phone-btn bubbly-button-dark bubbly-button">Отправить</button>
+                </div>
+                <h4 class="title">или</h4>
+                <h4 class="title">прямо сейчас напишете нам в ватсап</h4>
+                <a href="https://api.whatsapp.com/send?phone=996501611711" title="Написать в WhatsApp" class="whatsapp"></a>
+            </form>
         </div>
     </div>
 </div>
@@ -833,7 +828,7 @@
             <p>Авторский дизайн проект</p>
             <p>+ ремонт ПОД КЛЮЧ</p>
         </div>
-        <button class="btn bubbly-button bubbly-button-camel">Смотреть работу</button>
+        <button class="btn bubbly-button bubbly-button-camel btn-show">Смотреть работу</button>
         <div class="hover-caption">
             (<span class="photos"></span> фотографий + описание)
         </div>
@@ -911,16 +906,18 @@
         <div class="calls-block calls-block--portf">
             <div class="container">
                 <div class="content">
-                    <h3 class="title">Получите бесплатную консультацию нашего дизайнера прямо сейчас</h3>
-                    <div class="row calls-info">
-                        <input type="text" class="phone-num" placeholder="Ваш номер">
-                        <button class="btn phone-btn bubbly-button bubbly-button-camel">Отправить</button>
-                    </div>
-                    <p class="text">Звоните, мы сейчас работаем</p>
-                    <a href="tel:0555887799" class="our_phone">+996 555 88 77 99</a>
-                    <p class="text font-history">или</p>
-                    <p class="text">прямо сейчас напишете нам в ватсап</p>
-                    <a href="https://api.whatsapp.com/send?phone=996501611711" title="Написать в WhatsApp" class="whatsapp"></a>
+                    <form action="mail.php" method="POST" id="appl_form3" name="appl_form3" class="needs-validation" novalidate>
+                        <h3 class="title">Получите бесплатную консультацию нашего дизайнера прямо сейчас</h3>
+                        <div class="row calls-info">
+                            <input type="text" class="form-control phone-num" name="user_phone" placeholder="Ваш номер" required>
+                            <button type="submit" name="submit" class="btn phone-btn bubbly-button bubbly-button-camel">Отправить</button>
+                        </div>
+                        <p class="text">Звоните, мы сейчас работаем</p>
+                        <a href="tel:0555887799" class="our_phone">+996 555 88 77 99</a>
+                        <p class="text font-history">или</p>
+                        <p class="text">прямо сейчас напишете нам в ватсап</p>
+                        <a href="https://api.whatsapp.com/send?phone=996501611711" title="Написать в WhatsApp" class="whatsapp"></a>
+                    </form>
                 </div>
             </div>
         </div>
@@ -988,16 +985,18 @@
         <div class="calls-block calls-block--portf">
             <div class="container">
                 <div class="content">
-                    <h3 class="title">Получите бесплатную консультацию нашего дизайнера прямо сейчас</h3>
-                    <div class="row calls-info">
-                        <input type="text" class="phone-num" placeholder="Ваш номер">
-                        <button class="btn phone-btn bubbly-button bubbly-button-camel">Отправить</button>
-                    </div>
-                    <p class="text">Звоните, мы сейчас работаем</p>
-                    <a href="tel:0555887799" class="our_phone">+996 555 88 77 99</a>
-                    <p class="text font-history">или</p>
-                    <p class="text">прямо сейчас напишете нам в ватсап</p>
-                    <a href="https://api.whatsapp.com/send?phone=996501611711" title="Написать в WhatsApp" class="whatsapp"></a>
+                    <form action="mail.php" method="POST" id="appl_form4" name="appl_form4" class="needs-validation" novalidate>
+                        <h3 class="title">Получите бесплатную консультацию нашего дизайнера прямо сейчас</h3>
+                        <div class="row calls-info">
+                            <input type="text" class="form-control phone-num" name="user_phone" placeholder="Ваш номер" required>
+                            <button type="submit" name="submit" class="btn phone-btn bubbly-button bubbly-button-camel">Отправить</button>
+                        </div>
+                        <p class="text">Звоните, мы сейчас работаем</p>
+                        <a href="tel:0555887799" class="our_phone">+996 555 88 77 99</a>
+                        <p class="text font-history">или</p>
+                        <p class="text">прямо сейчас напишете нам в ватсап</p>
+                        <a href="https://api.whatsapp.com/send?phone=996501611711" title="Написать в WhatsApp" class="whatsapp"></a>
+                    </form>
                 </div>
             </div>
         </div>
@@ -1069,16 +1068,18 @@
         <div class="calls-block calls-block--portf">
             <div class="container">
                 <div class="content">
-                    <h3 class="title">Получите бесплатную консультацию нашего дизайнера прямо сейчас</h3>
-                    <div class="row calls-info">
-                        <input type="text" class="phone-num" placeholder="Ваш номер">
-                        <button class="btn phone-btn bubbly-button bubbly-button-camel">Отправить</button>
-                    </div>
-                    <p class="text">Звоните, мы сейчас работаем</p>
-                    <a href="tel:0555887799" class="our_phone">+996 555 88 77 99</a>
-                    <p class="text font-history">или</p>
-                    <p class="text">прямо сейчас напишете нам в ватсап</p>
-                    <a href="https://api.whatsapp.com/send?phone=996501611711" title="Написать в WhatsApp" class="whatsapp"></a>
+                    <form action="#" method="POST" id="appl_form5" name="appl_form5" class="needs-validation" novalidate>
+                        <h3 class="title">Получите бесплатную консультацию нашего дизайнера прямо сейчас</h3>
+                        <div class="row calls-info">
+                            <input type="text" class="phone-num form-control" name="user_phone" placeholder="Ваш номер" required>
+                            <button type="submit" name="submit" class="btn phone-btn bubbly-button bubbly-button-camel">Отправить</button>
+                        </div>
+                        <p class="text">Звоните, мы сейчас работаем</p>
+                        <a href="tel:0555887799" class="our_phone">+996 555 88 77 99</a>
+                        <p class="text font-history">или</p>
+                        <p class="text">прямо сейчас напишете нам в ватсап</p>
+                        <a href="https://api.whatsapp.com/send?phone=996501611711" title="Написать в WhatsApp" class="whatsapp"></a>
+                    </form>
                 </div>
             </div>
         </div>
@@ -1145,16 +1146,18 @@
         <div class="calls-block calls-block--portf">
             <div class="container">
                 <div class="content">
-                    <h3 class="title">Получите бесплатную консультацию нашего дизайнера прямо сейчас</h3>
-                    <div class="row calls-info">
-                        <input type="text" class="phone-num" placeholder="Ваш номер">
-                        <button class="btn phone-btn bubbly-button bubbly-button-camel">Отправить</button>
-                    </div>
-                    <p class="text">Звоните, мы сейчас работаем</p>
-                    <a href="tel:0555887799" class="our_phone">+996 555 88 77 99</a>
-                    <p class="text font-history">или</p>
-                    <p class="text">прямо сейчас напишете нам в ватсап</p>
-                    <a href="https://api.whatsapp.com/send?phone=996501611711" title="Написать в WhatsApp" class="whatsapp"></a>
+                    <form action="#" method="POST" id="appl_form6" name="appl_form6" class="needs-validation" novalidate>
+                        <h3 class="title">Получите бесплатную консультацию нашего дизайнера прямо сейчас</h3>
+                        <div class="row calls-info">
+                            <input type="text" class="phone-num form-control" placeholder="Ваш номер" name="user_phone" required>
+                            <button type="submit" name="submit" class="btn phone-btn bubbly-button bubbly-button-camel">Отправить</button>
+                        </div>
+                        <p class="text">Звоните, мы сейчас работаем</p>
+                        <a href="tel:0555887799" class="our_phone">+996 555 88 77 99</a>
+                        <p class="text font-history">или</p>
+                        <p class="text">прямо сейчас напишете нам в ватсап</p>
+                        <a href="https://api.whatsapp.com/send?phone=996501611711" title="Написать в WhatsApp" class="whatsapp"></a>
+                    </form>
                 </div>
             </div>
         </div>
@@ -1229,16 +1232,18 @@
         <div class="calls-block calls-block--portf">
             <div class="container">
                 <div class="content">
-                    <h3 class="title">Получите бесплатную консультацию нашего дизайнера прямо сейчас</h3>
-                    <div class="row calls-info">
-                        <input type="text" class="phone-num" placeholder="Ваш номер">
-                        <button class="btn phone-btn bubbly-button bubbly-button-camel">Отправить</button>
-                    </div>
-                    <p class="text">Звоните, мы сейчас работаем</p>
-                    <a href="tel:0555887799" class="our_phone">+996 555 88 77 99</a>
-                    <p class="text font-history">или</p>
-                    <p class="text">прямо сейчас напишете нам в ватсап</p>
-                    <a href="https://api.whatsapp.com/send?phone=996501611711" title="Написать в WhatsApp" class="whatsapp"></a>
+                    <form action="#" method="POST" id="appl_form7" name="appl_form7" class="needs-validation" novalidate>
+                        <h3 class="title">Получите бесплатную консультацию нашего дизайнера прямо сейчас</h3>
+                        <div class="row calls-info">
+                            <input type="text" class="form-control phone-num" name="user_phone" placeholder="Ваш номер" required>
+                            <button type="submit" name="submit" class="btn phone-btn bubbly-button bubbly-button-camel">Отправить</button>
+                        </div>
+                        <p class="text">Звоните, мы сейчас работаем</p>
+                        <a href="tel:0555887799" class="our_phone">+996 555 88 77 99</a>
+                        <p class="text font-history">или</p>
+                        <p class="text">прямо сейчас напишете нам в ватсап</p>
+                        <a href="https://api.whatsapp.com/send?phone=996501611711" title="Написать в WhatsApp" class="whatsapp"></a>
+                    </form>
                 </div>
             </div>
         </div>
@@ -1283,16 +1288,18 @@
         <div class="calls-block calls-block--portf">
             <div class="container">
                 <div class="content">
-                    <h3 class="title">Получите бесплатную консультацию нашего дизайнера прямо сейчас</h3>
-                    <div class="row calls-info">
-                        <input type="text" class="phone-num" placeholder="Ваш номер">
-                        <button class="btn phone-btn bubbly-button bubbly-button-camel">Отправить</button>
-                    </div>
-                    <p class="text">Звоните, мы сейчас работаем</p>
-                    <a href="tel:0555887799" class="our_phone">+996 555 88 77 99</a>
-                    <p class="text font-history">или</p>
-                    <p class="text">прямо сейчас напишете нам в ватсап</p>
-                    <a href="https://api.whatsapp.com/send?phone=996501611711" title="Написать в WhatsApp" class="whatsapp"></a>
+                    <form action="mail.php" method="POST" id="appl_form8" name="appl_form8" class="needs-validation" novalidate>
+                        <h3 class="title">Получите бесплатную консультацию нашего дизайнера прямо сейчас</h3>
+                        <div class="row calls-info">
+                            <input type="text" class="form-control phone-num" name="user_phone"  placeholder="Ваш номер" required>
+                            <button type="submit" name="submit" class="btn phone-btn bubbly-button bubbly-button-camel">Отправить</button>
+                        </div>
+                        <p class="text">Звоните, мы сейчас работаем</p>
+                        <a href="tel:0555887799" class="our_phone">+996 555 88 77 99</a>
+                        <p class="text font-history">или</p>
+                        <p class="text">прямо сейчас напишете нам в ватсап</p>
+                        <a href="https://api.whatsapp.com/send?phone=996501611711" title="Написать в WhatsApp" class="whatsapp"></a>
+                    </form>
                 </div>
             </div>
         </div>
@@ -1328,16 +1335,18 @@
         <div class="calls-block calls-block--portf">
             <div class="container">
                 <div class="content">
-                    <h3 class="title">Получите бесплатную консультацию нашего дизайнера прямо сейчас</h3>
-                    <div class="row calls-info">
-                        <input type="text" class="phone-num" placeholder="Ваш номер">
-                        <button class="btn phone-btn bubbly-button bubbly-button-camel">Отправить</button>
-                    </div>
-                    <p class="text">Звоните, мы сейчас работаем</p>
-                    <a href="tel:0555887799" class="our_phone">+996 555 88 77 99</a>
-                    <p class="text font-history">или</p>
-                    <p class="text">прямо сейчас напишете нам в ватсап</p>
-                    <a href="https://api.whatsapp.com/send?phone=996501611711" title="Написать в WhatsApp" class="whatsapp"></a>
+                    <form action="mail.php" method="POST" id="appl_form9" name="appl_form9" class="needs-validation" novalidate>
+                        <h3 class="title">Получите бесплатную консультацию нашего дизайнера прямо сейчас</h3>
+                        <div class="row calls-info">
+                            <input type="text" class="form-control phone-num" name="user_phone" placeholder="Ваш номер" required>
+                            <button type="submit" name="submit" class="btn phone-btn bubbly-button bubbly-button-camel">Отправить</button>
+                        </div>
+                        <p class="text">Звоните, мы сейчас работаем</p>
+                        <a href="tel:0555887799" class="our_phone">+996 555 88 77 99</a>
+                        <p class="text font-history">или</p>
+                        <p class="text">прямо сейчас напишете нам в ватсап</p>
+                        <a href="https://api.whatsapp.com/send?phone=996501611711" title="Написать в WhatsApp" class="whatsapp"></a>
+                    </form>
                 </div>
             </div>
         </div>
@@ -1373,16 +1382,18 @@
         <div class="calls-block calls-block--portf">
             <div class="container">
                 <div class="content">
-                    <h3 class="title">Получите бесплатную консультацию нашего дизайнера прямо сейчас</h3>
-                    <div class="row calls-info">
-                        <input type="text" class="phone-num" placeholder="Ваш номер">
-                        <button class="btn phone-btn bubbly-button bubbly-button-camel">Отправить</button>
-                    </div>
-                    <p class="text">Звоните, мы сейчас работаем</p>
-                    <a href="tel:0555887799" class="our_phone">+996 555 88 77 99</a>
-                    <p class="text font-history">или</p>
-                    <p class="text">прямо сейчас напишете нам в ватсап</p>
-                    <a href="https://api.whatsapp.com/send?phone=996501611711" title="Написать в WhatsApp" class="whatsapp"></a>
+                    <form action="mail.php" method="POST" id="appl_form10" name="appl_form10" class="needs-validation" novalidate>
+                        <h3 class="title">Получите бесплатную консультацию нашего дизайнера прямо сейчас</h3>
+                        <div class="row calls-info">
+                            <input type="text" class="form-control phone-num" name="user_phone" placeholder="Ваш номер" required>
+                            <button type="submit" name="submit" class="btn phone-btn bubbly-button bubbly-button-camel">Отправить</button>
+                        </div>
+                        <p class="text">Звоните, мы сейчас работаем</p>
+                        <a href="tel:0555887799" class="our_phone">+996 555 88 77 99</a>
+                        <p class="text font-history">или</p>
+                        <p class="text">прямо сейчас напишете нам в ватсап</p>
+                        <a href="https://api.whatsapp.com/send?phone=996501611711" title="Написать в WhatsApp" class="whatsapp"></a>
+                    </form>
                 </div>
             </div>
         </div>
@@ -1423,16 +1434,18 @@
         <div class="calls-block calls-block--portf">
             <div class="container">
                 <div class="content">
-                    <h3 class="title">Получите бесплатную консультацию нашего дизайнера прямо сейчас</h3>
-                    <div class="row calls-info">
-                        <input type="text" class="phone-num" placeholder="Ваш номер">
-                        <button class="btn phone-btn bubbly-button bubbly-button-camel">Отправить</button>
-                    </div>
-                    <p class="text">Звоните, мы сейчас работаем</p>
-                    <a href="tel:0555887799" class="our_phone">+996 555 88 77 99</a>
-                    <p class="text font-history">или</p>
-                    <p class="text">прямо сейчас напишете нам в ватсап</p>
-                    <a href="https://api.whatsapp.com/send?phone=996501611711" title="Написать в WhatsApp" class="whatsapp"></a>
+                    <form action="mail.php" method="POST" id="appl_form11" name="appl_form11" class="needs-validation" novalidate>
+                        <h3 class="title">Получите бесплатную консультацию нашего дизайнера прямо сейчас</h3>
+                        <div class="row calls-info">
+                            <input type="text" class="form-control phone-num" name="user_phone" placeholder="Ваш номер" required>
+                            <button type="submit" name="submit" class="btn phone-btn bubbly-button bubbly-button-camel">Отправить</button>
+                        </div>
+                        <p class="text">Звоните, мы сейчас работаем</p>
+                        <a href="tel:0555887799" class="our_phone">+996 555 88 77 99</a>
+                        <p class="text font-history">или</p>
+                        <p class="text">прямо сейчас напишете нам в ватсап</p>
+                        <a href="https://api.whatsapp.com/send?phone=996501611711" title="Написать в WhatsApp" class="whatsapp"></a>
+                    </form>
                 </div>
             </div>
         </div>
@@ -1494,16 +1507,18 @@
         <div class="calls-block calls-block--portf">
             <div class="container">
                 <div class="content">
-                    <h3 class="title">Получите бесплатную консультацию нашего дизайнера прямо сейчас</h3>
-                    <div class="row calls-info">
-                        <input type="text" class="phone-num" placeholder="Ваш номер">
-                        <button class="btn phone-btn bubbly-button bubbly-button-camel">Отправить</button>
-                    </div>
-                    <p class="text">Звоните, мы сейчас работаем</p>
-                    <a href="tel:0555887799" class="our_phone">+996 555 88 77 99</a>
-                    <p class="text font-history">или</p>
-                    <p class="text">прямо сейчас напишете нам в ватсап</p>
-                    <a href="https://api.whatsapp.com/send?phone=996501611711" title="Написать в WhatsApp" class="whatsapp"></a>
+                    <form action="mail.php" method="POST" id="appl_form12" name="appl_form12" class="needs-validation" novalidate>
+                        <h3 class="title">Получите бесплатную консультацию нашего дизайнера прямо сейчас</h3>
+                        <div class="row calls-info">
+                            <input type="text" class="form-control phone-num" name="user_phone" placeholder="Ваш номер" required>
+                            <button type="submit" name="submit" class="btn phone-btn bubbly-button bubbly-button-camel">Отправить</button>
+                        </div>
+                        <p class="text">Звоните, мы сейчас работаем</p>
+                        <a href="tel:0555887799" class="our_phone">+996 555 88 77 99</a>
+                        <p class="text font-history">или</p>
+                        <p class="text">прямо сейчас напишете нам в ватсап</p>
+                        <a href="https://api.whatsapp.com/send?phone=996501611711" title="Написать в WhatsApp" class="whatsapp"></a>
+                    </form>
                 </div>
             </div>
         </div>
